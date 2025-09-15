@@ -4,15 +4,13 @@ const { teksttype="brødtekst", stylingclasses=""} = Astro.props;
  
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige størrelser.
 const sizeClasses = {
-  handwritten: "text-[24px] lg:text[70px] text-[var(--accent-color)] font-handwritten not-italic",
-  brødtekst_light: "text-[14px] lg:text-[40px] text-[var(--text-color_light)] font-light not-italic",
-  brødtekst_dark: "text-[14px] lg:text-[40px] text-[var(--text-color_dark)] font-light not-italic",
-  h1: "text-[64px] lg:text-[270px] text-[var(--bg-color)] not-italic font-display",
-  h2: "text-[40px] lg:text-[170px] text-[var(--text-color_light)] not-italic font-display",
-  h3_light: "text-[36px] lg:text-[130px] text-[var(--text-color_light)] not-italic font-display",
-  h3_dark: "text-[36px] lg:text-[130px] text-[var(--text-color_dark)] not-italic font-display",
-}
+  "Light": "font-paragraph text-[var(--color-light)] text-[12px] lg:text-[20px]",
+  "Dark": "font-paragraph text-[var(--color-dark)] text-[12px] lg:text-[20px]",
+};
+
+
+
 ---
-<p class:list={[sizeClasses[teksttype], stylingclasses]}><slot /></p>
+<div class:list={[sizeClasses[teksttype], stylingclasses]}><slot/></div>
 
 

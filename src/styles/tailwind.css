@@ -5,7 +5,7 @@
 @import "tailwindcss-animated";
 @import "tailwindcss-intersect";
 
-/* @font-face {
+@font-face {
   font-family: "Honk";
   src: url("/fonts/Honk-Regular-VariableFont_MORF,SHLN.ttf") format("truetype");
 }
@@ -16,22 +16,24 @@
 }
 
 @font-face {
-  font-family: "Domine";
-  src: url("/fonts/Domine-Regular.ttf") format("truetype");
-} */
+  font-family: "futura-pt";
+  src: url("https://use.typekit.net/...") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
 
 @theme {
   /* Her tilføjes theme variable // tokens */
 
   /*Farver */
   --bg-color: #2e2d2d;
-  --text-color_light: #f2ecd5;
-  --text-color_dark: #2e2d2d;
+  --color-light: #f2ecd5;
+  --color-dark: #2e2d2d;
   --accent-color: #e9f422;
 
   /*Typografi */
   --font-display: "Bowlby One Sc", serif;
-  --text-font: "Futura-pt", serif;
+  --font-paragraph: "Lexend", sans-serif;
   --font-handwritten: "Over the Rainbow", sans-serif;
 }
 
