@@ -1,0 +1,58 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import thumbsup from "../assets/images/thumbsup.png";
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+import Button from "../components/Button.astro";
+---
+<MainLayout title="Titel">
+    <section class="py-30">
+    <div class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0" >
+     <Heading htmlheading="h2" size="medium" font="h2" stylingclasses="col-start-4 col-span-8 -mt-4 lg:-mt-10">Behind &</Heading>
+    <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-3 col-span-5 -mt-2 lg:-mt-6">Instant Day</Heading>
+    <Heading htmlheading="h2" size="medium" font="h2" stylingclasses="col-start-6 col-span-5 -mt-3 lg:-mt-8">About</Heading>
+    <Text teksttype="Light" stylingclasses="col-start-3 col-span-8 pt-10">Instant Day is a small project run by a couple of lecturers from the Multimedia Design programme at EK - Business Academy Copenhagen. Instant Day is a bi-annual project where lecturers and students collaborate on a digital design and communication project related to the Instant Day competition (this website). In essence, we just want to promote instant photography and have fun while doing it. Cheers.
+    </Text>
+    </div>
+    <img src="/images/scroll_2.png" alt="Billede 2" class="filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110 absolute w-15 lg:w-45 -left-1 lg:-left-10 bottom-170 lg:bottom-60 rotate-20">
+    <img src="/images/scroll_7.png" alt="Billede 7" class="filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110 absolute w-15 lg:w-45 left-115 lg:left-350 bottom-90 lg:bottom-130 -rotate-20">
+    </section>
+    <section class="bg-[url(/images/judges_bg.png)] bg-cover py-15 lg:py-20">
+    <Heading htmlheading="h3" size="small_light" font="h3_light" stylingclasses="col-start-4 col-span-8 text-center">The judges:</Heading>
+    <div class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0">
+    <Text teksttype="Light" stylingclasses="col-start-3 col-span-9 pt-2 pb-5">Submissions will be reviewed by: </Text>
+    <Text teksttype="Light" stylingclasses="col-start-3 col-span-9 py-3">
+    <ul class="list-disc list-inside space-y-2">
+    <li>Jonas Hasle (Assistant lecturer, Multimedia Design programme at EK)</li>
+    <li>Anders Dollerup (Associate lecturer, Multimedia Design programme at EK)</li>
+    <li>Birgitte Heide (Associate lecturer, Multimedia Design programme at EK)</li>
+    <li>Stefan Grage (Associate lecturer, Multimedia Design programme at EK)</li>
+    <li>Students on the Digital Design Elective on the Multimedia Design programme at KEA</li>
+    </ul>
+    </Text>
+    </div>
+    <div class="grid grid-cols-12">
+    <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-2 lg:col-start-4 col-span-5 pt-5 lg:pt-20">Have fun and....</Heading>
+    <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-5 lg:col-start-6 col-span-7 pt-10 lg:pt-10">....let's celebrate the imperfect!</Heading>
+    </div>
+</section>
+
+<section class="bg-[url(/images/sponsors_bg.png)] bg-cover py-15 lg:py-20 mb-20">
+    <div class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0">
+        <Heading htmlheading="h3" size="small_dark" font="h3_dark" stylingclasses="col-start-3 col-span-6">Sponsors:</Heading>
+        <Text teksttype="Dark" stylingclasses="col-start-3 col-span-9 pt-2 pb-5">
+        Instant Day is not affiliated to any companies within the Instant Photography industry. The only organisation backing us is EK - Business Academy Copenhagen. At least so far;-)</Text>
+        <a href="https://www.ek.dk/kurser?educationTypes=Akademiuddannelse&gad_source=1&gad_campaignid=1048748118&gbraid=0AAAAAD5ytlKfMThJ7Lxvj3Njg69NM_Uzp&gclid=CjwKCAjwlaTGBhANEiwAoRgXBd28GRkWp1gZeUENGifJXcpj9aAitpnwJbbodXnSvdnevxCY_7U0LBoCh3EQAvD_BwE" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   class="col-start-10">
+  <img 
+    src="/images/ek_logo.svg" 
+    alt="EK_logo" 
+    class="filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110"
+  >
+</a>
+</section>
+</MainLayout>
