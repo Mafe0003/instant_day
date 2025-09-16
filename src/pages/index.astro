@@ -42,22 +42,22 @@ import Button from "../components/Button.astro";
   <section class="relative my-20 overflow-hidden">
     <div class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0">
     <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-5 col-span-4 text-center">What is it? </Heading>
-    <Heading htmlheading="h2" size="medium" font="h2" stylingclasses="col-start-4 col-span-6 -mt-4 lg:-mt-10">What is</Heading>
-    <Heading htmlheading="h2" size="medium" font="h2" stylingclasses="col-start-3 col-span-6 -mt-4 lg:-mt-10">Instant</Heading>
-    <Heading htmlheading="h2" size="medium" font="h2" stylingclasses="col-start-7 col-span-4 -mt-4 lg:-mt-10">Day?</Heading>
+    <Heading htmlheading="h2" size="medium" font="h2" stylingclasses="col-start-4 col-span-6 -mt-4 lg:-mt-10 intersect:animate-fade-left intersect:duration-3000">What is</Heading>
+    <Heading htmlheading="h2" size="medium" font="h2" stylingclasses="col-start-3 col-span-6 -mt-4 lg:-mt-10 intersect:animate-fade-right intersect:duration-3000">Instant</Heading>
+    <Heading htmlheading="h2" size="medium" font="h2" stylingclasses="col-start-7 col-span-4 -mt-4 lg:-mt-10 intersect:animate-fade-up intersect:duration-4000">Day?</Heading>
     <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-3 col-span-2">Sooo....</Heading>
     <Text teksttype="Light" stylingclasses="col-start-3 col-span-8">October 18 is Instant Day - a day all about celebrating instant photography. So get out your Polaroid, Instax or whatever instant photography camera you are using, and show us your instants. Instant Day isn’t really a photo competition, it’s more a homage to good old analogue, instant photography - everybody who participates are winners:-) But: We do have a nice prize for one lucky instant photographer!</Text>
     </div>
     <img src="/images/scroll_1.png" alt="Billede 1" 
-       class="absolute w-36 lg:w-60 -left-20 bottom-20 rotate-12 filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110">
+       class="absolute w-36 lg:w-60 -left-20 bottom-20 rotate-12 filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110 intersect:animate-fade-right intersect:duration-3000">
     <img src="/images/scroll_13.jpg" alt="Billede 13" 
-       class="absolute w-36 lg:w-60 right-[-80px] bottom-40 -rotate-12 filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110">
+       class="absolute w-36 lg:w-60 right-[-80px] bottom-40 -rotate-12 filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110 intersect:animate-fade-left intersect:duration-3000">
 
   </section>
-  <section class="bg-[url(/images/share_y_instants_bg.webp)] bg-cover">
+  <section class="bg-[url(/images/share_y_instants_bg.webp)] bg-cover intersect:animate-fade-right intersect:duration-3000">
     <div class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0 py-20">
-      <Heading htmlheading="h3" size="small_dark" font="h3_dark" stylingclasses="col-start-3 col-span-7">Share your</Heading>
-      <Heading htmlheading="h3" size="small_dark" font="h3_dark" stylingclasses="col-start-6 col-span-6 -mt-6">instants!</Heading>
+      <Heading htmlheading="h3" size="small_dark" font="h3_dark" stylingclasses="col-start-3 col-span-7 intersect:animate-fade-up intersect:duration-3000">Share your</Heading>
+      <Heading htmlheading="h3" size="small_dark" font="h3_dark" stylingclasses="col-start-6 col-span-6 -mt-6 intersect:animate-fade-down intersect:duration-3000">instants!</Heading>
       <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-3 col-span-5 mt-10">How to participate? </Heading>
       <Text teksttype="Light" stylingclasses="col-start-3 col-span-9 pt-2 pb-7">So: Got an instant photo ready for the public? In order to take part in Instant Day: </Text>
       <Text teksttype="Light" stylingclasses="col-start-3 col-span-9 py-3">
@@ -73,13 +73,13 @@ import Button from "../components/Button.astro";
 
 <section class="my-30">
   <div class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0 pb-10">
-  <Heading htmlheading="h3" size="small_light" font="h3_light" stylingclasses="col-start-2 col-span-6 -mt-4 lg:-mt-10">Need some</Heading>
-  <Heading htmlheading="h3" size="small_light" font="h3_light" stylingclasses="col-start-5 col-span-7 -mt-4 lg:-mt-10">inspiration?</Heading>
+  <Heading htmlheading="h3" size="small_light" font="h3_light" stylingclasses="col-start-2 col-span-6 -mt-4 lg:-mt-10 intersect:animate-fade-down intersect:duration-3000">Need some</Heading>
+  <Heading htmlheading="h3" size="small_light" font="h3_light" stylingclasses="col-start-5 col-span-7 -mt-4 lg:-mt-10 intersect:animate-fade-left intersect:duration-3000">inspiration?</Heading>
   <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-9 col-span-4 -mt-2 lg:-mt-6">from others</Heading>
   </div>
  <!-- Første scroll-galleri (venstre -> højre) -->
  <div class="overflow-x-auto">
-  <div class="flex gap-6 min-w-max pl-20 lg:pl-40">
+  <div class="flex gap-6 min-w-max pl-20 lg:pl-40 intersect:animate-fade-left intersect:duration-3000">
       <img src="/images/scroll_1.png" alt="Billede 1" class="w-24 h-30 lg:w-64 lg:h-60 rounded-2xl flex-shrink-0 object-cover filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110">
        <img src="/images/scroll_8.png" alt="Billede 8" class="w-24 h-30 lg:w-64 lg:h-60 rounded-2xl flex-shrink-0 object-cover filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110">
       <img src="/images/scroll_3.png" alt="Billede 3" class="w-24 h-30 lg:w-64 lg:h-60 rounded-2xl flex-shrink-0 object-cover filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110">
@@ -95,7 +95,7 @@ import Button from "../components/Button.astro";
   </div>
   <!-- Andet scroll-galleri (højre -> venstre forskudt) -->
 <div class="overflow-x-auto mt-8" style="direction: rtl;">
-  <div class="flex flex-row-reverse gap-6 min-w-max justify-end pr-20 lg:pr-40">
+  <div class="flex flex-row-reverse gap-6 min-w-max justify-end pr-20 lg:pr-40 intersect:animate-fade-right intersect:duration-3000">
        <img src="/images/scroll_6.png" alt="Billede 6" class="w-24 h-30 lg:w-64 lg:h-60 rounded-2xl flex-shrink-0 object-cover filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110">
       <img src="/images/scroll_4.png" alt="Billede 4" class="w-24 h-30 lg:w-64 lg:h-60 rounded-2xl flex-shrink-0 object-cover filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110">
       <img src="/images/scroll_7.png" alt="Billede 7" class="w-24 h-30 lg:w-64 lg:h-60 rounded-2xl flex-shrink-0 object-cover filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110">
@@ -109,7 +109,7 @@ import Button from "../components/Button.astro";
 </section>
 <section class="bg-[url(/images/ready_t_upload_bg.png)] bg-cover">
   <div class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0 pt-20">
-    <Heading htmlheading="h3" size="small_dark" font="h3_dark" stylingclasses="col-start-2 col-span-10 text-center">Ready to upload?</Heading>
+    <Heading htmlheading="h3" size="small_dark" font="h3_dark" stylingclasses="col-start-2 col-span-10 text-center intersect:animate-fade-up intersect:duration-3000">Ready to upload?</Heading>
         <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-7 col-span-7 -mt-2 lg:-mt-5">Fill out the form below...</Heading>
   </div>
 <div class="pb-10 lg:pb-20">
@@ -180,10 +180,9 @@ import Button from "../components/Button.astro";
 </div>
 
 
-
 </section>
 <div class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 pt-20">
- <Heading htmlheading="h3" size="small_light" font="h3_light" stylingclasses="col-start-3 col-span-8 text-center">Coming soon</Heading>
+ <Heading htmlheading="h3" size="small_light" font="h3_light" stylingclasses="col-start-3 col-span-8 text-center intersect:animate-fade-left intersect:duration-3000">Coming soon</Heading>
 </div>
 <section
   class="flex flex-col items-center gap-8 py-10 lg:py-20 justify-center"
@@ -232,7 +231,7 @@ import Button from "../components/Button.astro";
 
 <script>
   // Gør countdown global, så Alpine kan finde den
-  window.countdown = function(target) { 
+ (window as any).countdown = function(target: string){ 
     return {
       targetDate: new Date(target),
       months: 0,
