@@ -1,0 +1,146 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import thumbsup from "../assets/images/thumbsup.png";
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+import Button from "../components/Button.astro";
+---
+<MainLayout title="Titel">
+    <section class="py-30">
+    <div class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0" >
+     <Heading htmlheading="h2" size="medium" font="h2" stylingclasses="col-start-4 col-span-8 -mt-4 lg:-mt-10">Winners &</Heading>
+    <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-2 col-span-5 -mt-2 lg:-mt-8">Are you excited?</Heading>
+    <Heading htmlheading="h2" size="medium" font="h2" stylingclasses="col-start-3 col-span-7 -mt-2 lg:-mt-6">Nominees</Heading>
+    <Text teksttype="Light" stylingclasses="col-start-3 col-span-8 pt-10">Instant Day was quite a success with more than [] contributions. So it was difficult to find a winner. After a couple of long but exciting days, the judges agreed on the winner and the [] nominees.
+    </Text>
+    </div>
+    <img src="/images/scroll_3.png" alt="Billede 3" class="filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110 absolute w-15 lg:w-45 -left-1 lg:-left-5 bottom-170 lg:bottom-150 rotate-20">
+    <img src="/images/scroll_7.png" alt="Billede 7" class="filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110 absolute w-15 lg:w-45 left-115 lg:left-350 bottom-90 lg:bottom-80 -rotate-20">
+    </section>
+     <section class="bg-[url(/images/winner_bg.png)] bg-cover relative">
+        <div class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0 py-20">
+           <Heading htmlheading="h3" size="small_dark" font="h3_dark" stylingclasses="col-start-4 col-span-8">The winner</Heading>
+           <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-8 col-span-3 -mt-2 lg:-mt-5">of 2025!</Heading>
+           <img src="/images/winner_img.png" alt="winner_instant" class="z-20 pt-8 lg:pt-15 col-start-2 col-span-7 w-full max-w-full h-auto filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110"
+  >
+           <img src="/images/winner_description.png" alt="winer_description" class="absolute w-60 lg:w-120 left-45 lg:left-170 bottom-30 lg:bottom-50 -rotate-5"
+  >
+            </div>
+    </section>
+ <section class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0 py-20">
+  <!-- Overskrifter -->
+  <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-4 col-span-8">
+    It was hard to choose but...
+  </Heading>
+  <Heading htmlheading="h3" size="small_light" font="h3_light" stylingclasses="col-start-2 col-span-11">
+    here are the Best
+  </Heading>
+  <Heading htmlheading="h3" size="small_light" font="h3_light" stylingclasses="col-start-2 col-span-11 -mt-3 lg:-mt-8">
+    of 2025 - nominees:
+  </Heading>
+
+  <!-- FLIP CARDS -->
+  <div class="group [perspective:1000px] col-start-3 col-span-3 lg:col-start-2 lg:col-span-3 cursor-pointer">
+    <div class="relative w-full aspect-[3/4] transition-transform duration-700 [transform-style:preserve-3d] group-[.flipped]:[transform:rotateY(180deg)]">
+      <!-- Forside -->
+      <div class="absolute inset-0 [backface-visibility:hidden]">
+        <img src="/images/nominees_1.jpg" alt="nominee 1"
+          class="w-full h-full object-cover pt-10 lg:pt-25 filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110 -rotate-6">
+      </div>
+      <!-- Bagside -->
+    <div class="absolute inset-0 bg-neutral-600 text-amber-50 flex flex-col p-2 justify-center [transform:rotateY(180deg)] [backface-visibility:hidden] scale-90">
+    <Text teksttype="Nominees">Submitter: Stefan Grage</Text><br>
+    <Text teksttype="Nominees">Description/story:<br> The scenic beauty of a former lime pit with a twist of coffee...</Text>
+    </div>
+
+    </div>
+  </div>
+
+  <div class="group [perspective:1000px] col-start-8 col-span-3 lg:col-start-6 lg:col-span-3 cursor-pointer">
+    <div class="relative w-full aspect-[3/4] transition-transform duration-700 [transform-style:preserve-3d] group-[.flipped]:[transform:rotateY(180deg)]">
+      <div class="absolute inset-0 [backface-visibility:hidden]">
+        <img src="/images/nominees_2.jpg" alt="nominee 2"
+          class="w-full h-full object-cove pt-10 lg:pt-25 filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110 rotate-8">
+      </div>
+    <div class="absolute inset-0 bg-neutral-600 text-amber-50 flex flex-col p-2 justify-center [transform:rotateY(180deg)] [backface-visibility:hidden] scale-90">
+    <Text teksttype="Nominees">Submitter: Birgitte Heide</Text><br>
+    <Text teksttype="Nominees">Description/story:<br>A cheerful little sewing machine bursting with colors and creativity.</Text>
+    </div>
+    </div>
+  </div>
+
+  <div class="group [perspective:1000px] col-start-3 col-span-3 lg:col-start-10 lg:col-span-3 cursor-pointer">
+    <div class="relative w-full aspect-[3/4] transition-transform duration-700 [transform-style:preserve-3d] group-[.flipped]:[transform:rotateY(180deg)]">
+      <div class="absolute inset-0 [backface-visibility:hidden]">
+        <img src="/images/nominees_3.jpg" alt="nominee 3"
+          class="w-full h-full object-cover pt-10 lg:pt-25 grayscale hover:grayscale-0 transition duration-300 hover:scale-110 -rotate-10">
+      </div>
+      <div class="absolute inset-0 bg-neutral-600 text-amber-50 flex flex-col p-2 justify-center [transform:rotateY(180deg)] [backface-visibility:hidden] scale-90">
+    <Text teksttype="Nominees">Submitter: Stefan Grage</Text><br>
+    <Text teksttype="Nominees">Description/story:<br> Løserup strand in Holbæk. The polaroid was soaked in beer for around three weeks, which turned the landscape into an unrecognizable pattern of colors. I used a Polaroid Flip, expired film and a can of Pripps blå beer. </Text>
+    </div>
+    </div>
+  </div>
+
+  <div class="group [perspective:1000px] col-start-8 col-span-3 lg:col-start-2 lg:col-span-3 cursor-pointer">
+    <div class="relative w-full aspect-[3/4] transition-transform duration-700 [transform-style:preserve-3d] group-[.flipped]:[transform:rotateY(180deg)]">
+      <div class="absolute inset-0 [backface-visibility:hidden]">
+        <img src="/images/nominees_4.jpg" alt="nominee 4"
+          class="w-full h-full object-cover pt-10 lg:pt-25 filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110 rotate-10">
+      </div>
+     <div class="absolute inset-0 bg-neutral-600 text-amber-50 flex flex-col p-2 justify-center [transform:rotateY(180deg)] [backface-visibility:hidden] scale-90">
+    <Text teksttype="Nominees">Submitter: Stefan Grage</Text><br>
+    <Text teksttype="Nominees">Description/story:<br> The beach at my summer house in Løserup. Expired instax mini film. I microwaved it. I should have studied how to microwave an instant image: It caught fire in the oven.</Text>
+    </div>
+    </div>
+  </div>
+
+  <div class="group [perspective:1000px] col-start-3 col-span-3 lg:col-start-6 lg:col-span-3 cursor-pointer">
+    <div class="relative w-full aspect-[3/4] transition-transform duration-700 [transform-style:preserve-3d] group-[.flipped]:[transform:rotateY(180deg)]">
+      <div class="absolute inset-0 [backface-visibility:hidden]">
+        <img src="/images/nominees_5.jpg" alt="nominee 5"
+          class="w-full h-full object-cover pt-10 lg:pt-25 filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110 -rotate-3">
+      </div>
+    <div class="absolute inset-0 bg-neutral-600 text-amber-50 flex flex-col p-2 justify-center [transform:rotateY(180deg)] [backface-visibility:hidden] scale-90">
+    <Text teksttype="Nominees">Submitter: Stefan Grage</Text><br>
+    <Text teksttype="Nominees">Description/story:<br>Amager Strand is close to the sea. So I wanted to give this polaroid a twist of water: The polaroid soaked for around three weeks in water. I used a Polaroid Now+ gen 2. .</Text>
+    </div>
+    </div>
+  </div>
+
+  <div class="group [perspective:1000px] col-start-8 col-span-3 lg:col-start-10 lg:col-span-3 cursor-pointer">
+    <div class="relative w-full aspect-[3/4] transition-transform duration-700 [transform-style:preserve-3d] group-[.flipped]:[transform:rotateY(180deg)]">
+      <div class="absolute inset-0 [backface-visibility:hidden]">
+        <img src="/images/nominees_6.png" alt="nominee 6"
+          class="w-full h-full object-cover pt-10 lg:pt-25 filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110 rotate-8">
+      </div>
+      <div class="absolute inset-0 bg-neutral-600 text-amber-50 flex flex-col p-2 justify-center [transform:rotateY(180deg)] [backface-visibility:hidden] scale-90">
+    <Text teksttype="Nominees">Submitter: Sussie Pedersen</Text><br>
+    <Text teksttype="Nominees">Description/story:<br>The endless blue sea dancing with playful waves under the warm sun.</Text>
+    </div>
+    </div>
+  </div>
+
+  <!-- Footer-tekst -->
+  <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-4 col-span-6 pt-15 lg:pt-30 lg:pb-20 text-center">
+    What are you waiting for? Let's see your instants!
+  </Heading>
+</section>
+
+<script>
+  // Toggle flip ved klik
+  document.querySelectorAll(".group").forEach((card) => {
+    card.addEventListener("click", () => {
+      card.classList.toggle("flipped");
+    });
+  });
+</script>
+
+
+
+
+
+
+</MainLayout>
