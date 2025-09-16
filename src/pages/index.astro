@@ -39,7 +39,7 @@ import Button from "../components/Button.astro";
     class="block md:hidden absolute top-0 left-0 w-full h-full object-cover" />
 </section>
 
-  <section class="relative my-20">
+  <section class="relative my-20 overflow-hidden">
     <div class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0">
     <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-5 col-span-4 text-center">What is it? </Heading>
     <Heading htmlheading="h2" size="medium" font="h2" stylingclasses="col-start-4 col-span-6 -mt-4 lg:-mt-10">What is</Heading>
@@ -48,6 +48,10 @@ import Button from "../components/Button.astro";
     <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-3 col-span-2">Sooo....</Heading>
     <Text teksttype="Light" stylingclasses="col-start-3 col-span-8">October 18 is Instant Day - a day all about celebrating instant photography. So get out your Polaroid, Instax or whatever instant photography camera you are using, and show us your instants. Instant Day isn’t really a photo competition, it’s more a homage to good old analogue, instant photography - everybody who participates are winners:-) But: We do have a nice prize for one lucky instant photographer!</Text>
     </div>
+    <img src="/images/scroll_1.png" alt="Billede 1" 
+       class="absolute w-36 lg:w-60 -left-20 bottom-20 rotate-12 filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110">
+    <img src="/images/scroll_13.jpg" alt="Billede 13" 
+       class="absolute w-36 lg:w-60 right-[-80px] bottom-40 -rotate-12 filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110">
 
   </section>
   <section class="bg-[url(/images/share_y_instants_bg.webp)] bg-cover">
@@ -74,8 +78,8 @@ import Button from "../components/Button.astro";
   <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-9 col-span-4 -mt-2 lg:-mt-6">from others</Heading>
   </div>
  <!-- Første scroll-galleri (venstre -> højre) -->
-  <div class="col-span-12 mt-6 overflow-x-auto -mr-40 pb-10">
-    <div class="flex gap-4 lg:gap-8 min-w-max mr-40 lg:mr-100">
+ <div class="overflow-x-auto">
+  <div class="flex gap-6 min-w-max pl-20 lg:pl-40">
       <img src="/images/scroll_1.png" alt="Billede 1" class="w-24 h-30 lg:w-64 lg:h-60 rounded-2xl flex-shrink-0 object-cover filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110">
        <img src="/images/scroll_8.png" alt="Billede 8" class="w-24 h-30 lg:w-64 lg:h-60 rounded-2xl flex-shrink-0 object-cover filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110">
       <img src="/images/scroll_3.png" alt="Billede 3" class="w-24 h-30 lg:w-64 lg:h-60 rounded-2xl flex-shrink-0 object-cover filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110">
@@ -87,11 +91,11 @@ import Button from "../components/Button.astro";
     </div>
   </div>
   <div class="grid grid-cols-12">
-    <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-1 col-span-5 pl-8 pb-4">Scroll for more...</Heading>
+    <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-1 col-span-5 pl-3 lg:pl-6 py-6">Scroll for more...</Heading>
   </div>
   <!-- Andet scroll-galleri (højre -> venstre forskudt) -->
-  <div class="col-span-12 lg:mt-6 overflow-x-auto -ml-40 pt-8">
-    <div class="flex gap-4 lg:gap-8 min-w-max justify-end ml-40 lg:ml-100">
+<div class="overflow-x-auto mt-8" style="direction: rtl;">
+  <div class="flex flex-row-reverse gap-6 min-w-max justify-end pr-20 lg:pr-40">
        <img src="/images/scroll_6.png" alt="Billede 6" class="w-24 h-30 lg:w-64 lg:h-60 rounded-2xl flex-shrink-0 object-cover filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110">
       <img src="/images/scroll_4.png" alt="Billede 4" class="w-24 h-30 lg:w-64 lg:h-60 rounded-2xl flex-shrink-0 object-cover filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110">
       <img src="/images/scroll_7.png" alt="Billede 7" class="w-24 h-30 lg:w-64 lg:h-60 rounded-2xl flex-shrink-0 object-cover filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110">
@@ -159,7 +163,7 @@ import Button from "../components/Button.astro";
 
     <!-- Terms & conditions -->
     <div class="flex items-start space-x-3">
-      <input type="checkbox" id="terms" name="terms" class="mt-1 h-5 w-5 rounded border-gray-300 text-black focus:ring-black" required>
+      <input type="checkbox" id="terms" name="terms" class="mt-1 h-5 w-5 rounded border-gray-300 text-black focus:ring-black cursor-pointer" required>
       <label for="terms" class="text-gray-700 text-sm">
         I have read and agree to the 
         <a href="/terms" class="underline hover:text-black font-medium">terms and conditions</a>
@@ -169,7 +173,7 @@ import Button from "../components/Button.astro";
     <!-- Submit button -->
     <button 
       type="submit" 
-      class="w-full bg-black text-white font-semibold py-3 rounded-lg shadow-md hover:bg-gray-800 transition">
+      class="w-full bg-black text-white font-semibold py-3 rounded-lg shadow-md hover:bg-gray-800 transition cursor-pointer">
       Submit
     </button>
   </form>

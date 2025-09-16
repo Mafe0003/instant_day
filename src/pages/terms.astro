@@ -1,0 +1,42 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import thumbsup from "../assets/images/thumbsup.png";
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+import Button from "../components/Button.astro";
+---
+<MainLayout title="Terms">
+  <div class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 py-20">
+    <Heading htmlheading="h2" size="medium" font="h2" stylingclasses="col-start-2 col-span-10 text-center -mt-4 lg:-mt-10">
+      Terms & conditions
+    </Heading>
+    <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-3 col-span-4 pt-5 lg:pt-10">Good to know:</Heading>
+
+    <Text teksttype="Light" stylingclasses="col-start-3 col-span-8 pt-5 lg:pt-7"> <span class="font-bold">Participation:</span><br>
+The competition is open to all photographers, both amateurs and professionals, who are over 18 years old.
+</Text>
+    <Text teksttype="Light" stylingclasses="col-start-3 col-span-8 pt-5 lg:pt-7"> <span class="font-bold">Instant Photo:</span><br>
+Every submission has to be an analogue instant photo - not a digital montage made in a photo editing suite. The instant can be made in various ways, with analogue instant cameras, digital instant cameras like ie. the Fujifilm EVO or scan-and-print tools like ie. the Polaroid Lab. The instant photo can be manipulated with analogue processes - the organizers encourage instant photography experiments. The submission can depict the instant photo in many ways: As a flat scan without or without the instant photo frame, as a photo showing the instants in a frame, on the wall etc. The instant doesn’t need to be just one photo: It can be a panorama or collage of multiple instants that make up one submission. 
+</Text>
+<Text teksttype="Light" stylingclasses="col-start-3 col-span-8 pt-5 lg:pt-7"> <span class="font-bold">Consent:</span><br>
+It is prohibited to upload photographs of people who have not given consent to the publication of the image. Images of people in private or embarrassing situations, regardless of whether they are photographed in a public place, are not allowed.
+</Text>
+<Text teksttype="Light" stylingclasses="col-start-3 col-span-8 pt-5 lg:pt-7"> <span class="font-bold">Legal stuff:</span><br>
+The organizers reserve the right to disqualify any participant who violates these conditions. The organizers assume no responsibility for any loss, damage or injury that may arise as a result of participation in the competition or the use of prizes. Participants release the organizers from any claim, lawsuit or liability related to their participation in the competition.
+<Text teksttype="Light" stylingclasses="col-start-3 col-span-8 pt-5 lg:pt-7"> <span class="font-bold">Number of submissions:</span><br>
+You can enter the competition with a total of five submissions.
+</Text>
+<Text teksttype="Light" stylingclasses="col-start-3 col-span-8 pt-5 lg:pt-7"> <span class="font-bold">Usage rights:</span><br>
+By submitting one or more images and thereby participating in the competition, you agree that the image may be used for the promotion of the photo competition and possibly in physical exhibition spaces afterwards. The organizers will credit the participants wherever practical and reasonably possible.
+</Text>
+<Text teksttype="Light" stylingclasses="col-start-3 col-span-8 pt-5 lg:pt-7"> <span class="font-bold">Copyright:</span><br>
+You must be the author of the submitted instants and have the rights to publish them. The instants must be free of third party rights. Participants retain all copyright in their submitted instants. By submitting instants to the competition, participants grant the organizers a non-exclusive license to use, reproduce and publish the submitted images in connection with the promotion of the competition, including on social media platforms, websites and printed materials. The organizers will credit the participants wherever practical and reasonable.
+</Text>
+<Text teksttype="Light" stylingclasses="col-start-3 col-span-8 pt-5 lg:pt-7"> <span class="font-bold">Announcement of Winners:</span><br>
+The winners of the competition will be announced on the official website and/or social media platforms of the organizers. By participating in the competition, the winners consent to the publication of their names and submitted photos for promotional purposes.
+</Text>
+  
+  </div>
+</MainLayout>
