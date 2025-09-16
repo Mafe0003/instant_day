@@ -48,8 +48,12 @@ import Button from "../components/Button.astro";
     <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-3 col-span-2">Sooo....</Heading>
     <Text teksttype="Light" stylingclasses="col-start-3 col-span-8">October 18 is Instant Day - a day all about celebrating instant photography. So get out your Polaroid, Instax or whatever instant photography camera you are using, and show us your instants. Instant Day isn’t really a photo competition, it’s more a homage to good old analogue, instant photography - everybody who participates are winners:-) But: We do have a nice prize for one lucky instant photographer!</Text>
     </div>
+    <!-- skal den scrolle ned til countdown? -->
+    <a href="#countdown">
+  <Button>save the date</Button>
+</a>
+</section>
 
-  </section>
   <section class="bg-[url(/images/share_y_instants_bg.webp)] bg-cover">
     <div class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0 py-20">
       <Heading htmlheading="h3" size="small_dark" font="h3_dark" stylingclasses="col-start-3 col-span-7">Share your</Heading>
@@ -65,6 +69,7 @@ import Button from "../components/Button.astro";
       </ol>
       </Text>
   </div>
+ 
 </section>
 
 <section class="my-30">
@@ -73,6 +78,7 @@ import Button from "../components/Button.astro";
   <Heading htmlheading="h3" size="small_light" font="h3_light" stylingclasses="col-start-5 col-span-7 -mt-4 lg:-mt-10">inspiration?</Heading>
   <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-9 col-span-4 -mt-2 lg:-mt-6">from others</Heading>
   </div>
+
  <!-- Første scroll-galleri (venstre -> højre) -->
   <div class="col-span-12 mt-6 overflow-x-auto -mr-40 pb-10">
     <div class="flex gap-4 lg:gap-8 min-w-max mr-40 lg:mr-100">
@@ -178,7 +184,7 @@ import Button from "../components/Button.astro";
 
 
 </section>
-<div class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 pt-20">
+<div id="countdown" class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 pt-20">
  <Heading htmlheading="h3" size="small_light" font="h3_light" stylingclasses="col-start-3 col-span-8 text-center">Coming soon</Heading>
 </div>
 <section
