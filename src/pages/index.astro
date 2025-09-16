@@ -20,11 +20,25 @@ import Button from "../components/Button.astro";
 </div>
 
   <!-- Hero Section -->
-  <section 
-    class="relative w-full h-[70vh] md:h-screen bg-cover bg-center flex flex-col items-center justify-center"
-    style="background-image: url('/images/hero_img.png');"
-  >
-  </section>
+  <section class="relative w-full h-[40vh] lg:h-screen overflow-hidden">
+
+  <!-- Video baggrund (kun desktop) -->
+  <video 
+    autoplay 
+    loop 
+    muted 
+    playsinline 
+    class="hidden lg:block absolute top-0 left-0 w-full h-full object-cover">
+    <source src="/videos/hero_video.mp4" type="video/mp4" />
+  </video>
+
+  <!-- Statisk billede (kun mobil) -->
+  <img 
+    src="/images/hero_img.webp" 
+    alt="Hero background" 
+    class="block md:hidden absolute top-0 left-0 w-full h-full object-cover" />
+</section>
+
   <section class="relative my-20">
     <div class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0">
     <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-5 col-span-4 text-center">What is it? </Heading>
@@ -35,11 +49,6 @@ import Button from "../components/Button.astro";
     <Text teksttype="Light" stylingclasses="col-start-3 col-span-8">October 18 is Instant Day - a day all about celebrating instant photography. So get out your Polaroid, Instax or whatever instant photography camera you are using, and show us your instants. Instant Day isn’t really a photo competition, it’s more a homage to good old analogue, instant photography - everybody who participates are winners:-) But: We do have a nice prize for one lucky instant photographer!</Text>
     </div>
 
-    <img src="/images/scroll_1.png" alt="Billede 1" class="filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110 absolute w-15 lg:w-45 -left-5 lg:-left-8 bottom-15 lg:bottom-20 rotate-20">
-    <img src="/images/scroll_13.jpg" alt="Billede 13" class="filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110 absolute w-15 lg:w-45 left-115 lg:left-350 bottom-60 lg:bottom-90 -rotate-25">
-    
-    
-    
   </section>
   <section class="bg-[url(/images/share_y_instants_bg.webp)] bg-cover">
     <div class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0 py-20">
