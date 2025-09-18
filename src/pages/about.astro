@@ -22,7 +22,7 @@ import PersonBuilder from "../components/PersonBuilder.astro";
     <section class="py-30 overflow-hidden relative">
     <div class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0" >
      <Heading htmlheading="h2" size="medium" font="h2" stylingclasses="col-start-4 col-span-8 -mt-4 lg:-mt-10 intersect:animate-fade-left intersect:duration-3000">Behind &</Heading>
-    <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-3 col-span-5 -mt-2 lg:-mt-6">Instant Day</Heading>
+    <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-3 col-span-5 -mt-2 lg:-mt-6 intersect:animate-fade-up intersect:duration-3000">Instant Day</Heading>
     <Heading htmlheading="h2" size="medium" font="h2" stylingclasses="col-start-6 col-span-5 -mt-3 lg:-mt-8 intersect:animate-fade-right intersect:duration-3000">About</Heading>
     <Text teksttype="Light" stylingclasses="col-start-3 col-span-8 pt-10 intersect:animate-fade-up intersect:duration-3000">Instant Day is a small project run by a couple of lecturers from the Multimedia Design programme at EK - Business Academy Copenhagen. Instant Day is a bi-annual project where lecturers and students collaborate on a digital design and communication project related to the Instant Day competition (this website). In essence, we just want to promote instant photography and have fun while doing it. Cheers.
     </Text>
@@ -33,9 +33,9 @@ import PersonBuilder from "../components/PersonBuilder.astro";
     <section class="bg-[url(/images/judges_bg.png)] bg-cover py-15 lg:py-20">
     <Heading htmlheading="h3" size="small_light" font="h3_light" stylingclasses="col-start-4 col-span-8 text-center fadeinleft1">The judges:</Heading>
     <div class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0">
-    <Text teksttype="Light" stylingclasses="col-start-3 col-span-9 pt-2 pb-5">Submissions will be reviewed by: </Text>
+    <Text teksttype="Light" stylingclasses="col-start-3 col-span-9 pt-2 pb-5 fadeup3">Submissions will be reviewed by: </Text>
     <Text teksttype="Light" stylingclasses="col-start-3 col-span-9 py-3">
-    <ul class="list-disc list-inside space-y-2">
+    <ul class="list-disc list-inside space-y-2 fadeinright4">
     <li>Jonas Hasle (Assistant lecturer, Multimedia Design programme at EK)</li>
     <li>Anders Dollerup (Associate lecturer, Multimedia Design programme at EK)</li>
     <li>Birgitte Heide (Associate lecturer, Multimedia Design programme at EK)</li>
@@ -45,22 +45,22 @@ import PersonBuilder from "../components/PersonBuilder.astro";
     </Text>
     </div>
     <div class="grid grid-cols-12">
-    <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-2 lg:col-start-3 col-span-7 pt-5 lg:pt-10">Scroll through the judges....</Heading>
-    <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-5 lg:col-start-5 col-span-8 pt-5 lg:py-7">....and create your very own ultimate judge!</Heading>
+    <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-2 lg:col-start-3 col-span-7 pt-5 lg:pt-10 fadeinleft5">Scroll through the judges....</Heading>
+    <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-5 lg:col-start-5 col-span-8 pt-5 lg:py-7 fadeinright5">....and create your very own ultimate judges!</Heading>
     </div>
-  <div class="flex items-center justify-center min-h-screen -my-30 lg:-my-15">
+   <div class="flex items-center justify-center min-h-screen -my-30 lg:-my-15">
   <PersonBuilder />
-</div>
+</div> 
 </section>
 <section class="grid grid-cols-12">
-    <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-2 lg:col-start-4 col-span-5 pt-15 lg:pt-20">Have fun and....</Heading>
-    <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-5 lg:col-start-6 col-span-7 pt-10 -mb-10">....let's celebrate the imperfect!</Heading>
+    <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-2 lg:col-start-4 col-span-5 pt-15 lg:pt-20 fadeinleft6">Have fun and....</Heading>
+    <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-5 lg:col-start-6 col-span-7 pt-10 -mb-10 fadeup4">....let's celebrate the imperfect!</Heading>
 </section>
 
 <section class="bg-[url(/images/sponsors_bg.png)] bg-cover py-15 lg:py-20 my-30">
     <div class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0">
         <Heading htmlheading="h3" size="small_dark" font="h3_dark" stylingclasses="col-start-3 col-span-6 fadeinright1">Sponsors:</Heading>
-        <Text teksttype="Dark" stylingclasses="col-start-3 col-span-9 pt-2 pb-5">
+        <Text teksttype="Dark" stylingclasses="col-start-3 col-span-9 pt-2 pb-5 fadeinleft7">
         Instant Day is not affiliated to any companies within the Instant Photography industry. The only organisation backing us is EK - Business Academy Copenhagen. At least so far;-)</Text>
         <a href="https://www.ek.dk/kurser?educationTypes=Akademiuddannelse&gad_source=1&gad_campaignid=1048748118&gbraid=0AAAAAD5ytlKfMThJ7Lxvj3Njg69NM_Uzp&gclid=CjwKCAjwlaTGBhANEiwAoRgXBd28GRkWp1gZeUENGifJXcpj9aAitpnwJbbodXnSvdnevxCY_7U0LBoCh3EQAvD_BwE" 
    target="_blank" 
@@ -115,4 +115,31 @@ import PersonBuilder from "../components/PersonBuilder.astro";
 	animate( ".fadeinleft4", { x: [-2000, 0 ] }, { duration: 1.5})
 	})
 
+  inView( ".fadeinright4" , () =>{
+	animate( ".fadeinright4", { x: [2000, 0 ] }, { duration: 1.5})
+	})
+
+  inView( ".fadeup3" , () =>{
+	animate( ".fadeup3", { y: [2000, 0 ] }, { duration: 1.5})
+	})
+
+   inView( ".fadeinleft5" , () =>{
+	animate( ".fadeinleft5", { x: [-2000, 0 ] }, { duration: 1.5})
+	})
+
+ inView( ".fadeinright5" , () =>{
+	animate( ".fadeinright5", { x: [2000, 0 ] }, { duration: 1.5})
+	})
+
+  inView( ".fadeup4" , () =>{
+	animate( ".fadeup4", { y: [2000, 0 ] }, { duration: 1.5})
+	})
+
+  inView( ".fadeinleft6" , () =>{
+	animate( ".fadeinleft6", { x: [-2000, 0 ] }, { duration: 1.5})
+	})
+
+  inView( ".fadeinleft7" , () =>{
+	animate( ".fadeinleft7", { x: [-2000, 0 ] }, { duration: 1.5})
+	})
 </script> 
