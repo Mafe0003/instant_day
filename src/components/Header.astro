@@ -7,31 +7,30 @@
 >
 
 <!-- Logo (top-left, always visible) -->
-<a href="/" class="fixed top-4 left-4 z-50">
-  <img src="/images/logo.svg" alt="Logo" class="h-8 md:h-10 w-auto" />
+<a href="/" class="fixed top-4 left-4 lg:left-6 lg:top-6 z-50">
+  <img src="/images/logo.svg" alt="Logo" class="h-8 md:h-12 w-auto" />
 </a>
 
   <!-- Desktop Menu (right side, separate buttons) -->
-<nav class="hidden lg:flex flex-col gap-35 fixed right-4 top-1/8 items-center z-50"
-     style="font-family: 'Bowlby One SC', sans-serif;">
+<nav class="hidden lg:flex flex-col gap-35 fixed right-4 top-1/8 items-center z-50 font-paragraph font-bold lg:text-xl">
   <a href="/#share_y_instant" 
-     class="bg-[#E9F422] border-1 border-[#E9F422] text-[#2e2d2d] px-4 py-2 rounded-full font-bold rotate-90 
+     class="bg-[#E9F422] border-1 border-[#E9F422] text-[#2e2d2d] px-4 py-2 rounded-full rotate-90 
             hover:bg-[#2e2d2d] hover:border-[#E9F422] hover:text-[#E9F422] transition-colors duration-300">
     I'm in
   </a>
 
   <a href="/why" 
-     class="bg-[#E9F422] border-1 border-[#E9F422] text-[#2e2d2d] px-4 py-2 rounded-full font-bold rotate-90 
+     class="bg-[#E9F422] border-1 border-[#E9F422] text-[#2e2d2d] px-4 py-2 rounded-full rotate-90 
            hover:bg-[#2e2d2d] hover:border-[#E9F422] hover:text-[#E9F422] transition-colors duration-300">
     Why instants
   </a>
   <a href="/winners" 
-     class="bg-[#E9F422] border-1 border-[#E9F422] text-[#2e2d2d] px-4 py-2 rounded-full font-bold rotate-90 
+     class="bg-[#E9F422] border-1 border-[#E9F422] text-[#2e2d2d] px-4 py-2 rounded-full rotate-90 
            hover:bg-[#2e2d2d] hover:border-[#E9F422] hover:text-[#E9F422] transition-colors duration-300">
     Winners
   </a>
   <a href="/about" 
-     class="bg-[#E9F422] border-1 border-[#E9F422] text-[#2e2d2d] px-4 py-2 rounded-full font-bold rotate-90 
+     class="bg-[#E9F422] border-1 border-[#E9F422] text-[#2e2d2d] px-4 py-2 rounded-full rotate-90 
            hover:bg-[#2e2d2d] hover:border-[#E9F422] hover:text-[#E9F422] transition-colors duration-300">
     About
   </a>
@@ -62,9 +61,9 @@
 </button>
 
 <!-- a elementer men hover effekt -->
-<nav class="flex flex-col items-start gap-6 p-8 text-black text-lg mt-12">
+<nav class="flex flex-col items-start gap-6 p-8 font-paragraph text-xl font-bold mt-12">
       <a
-  href="/"
+  href="#share_y_instant"
   @click="open = false"
   class="group flex flex-col items-center"
 >
@@ -75,8 +74,6 @@
            group-hover:bg-[#2D2C2C] group-hover:text-[#F7F709] group-hover:border-[#F7F709]">I'm in
   </span>
 </a>
-
-
 
       <a href="/why" @click="open = false" class="group flex flex-col items-start">
        <span
