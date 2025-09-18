@@ -1,31 +1,35 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+import Header from "../components/Header.astro";
 ---
 
 <MainLayout title="Titel">
   <body>
     <main class="bg-[#2D2C2C]">
       <section class="grid grid-cols-12">
-        <div class="col-span-12 m-auto lg:col-start-3 lg:col-span-3">
-          <h4
-            class="text-[#E9F422] text-2x1 lg:text-4xl mb-2 lg:mb-10"
-            style=" font-family: 'La Belle Aurore', cursive;"
+        <div class="col-start-3 col-span-6 m-auto lg:col-start-3 lg:col-span-3">
+          <Heading
+            htmlheading="h4"
+            size="xsmall"
+            font="h4"
+            stylingclasses="col-start-5 col-span-4"
           >
             Why use it?
-          </h4>
-          <h2
-            class="text-[#F2ECD5] lg:text-8xl"
-            style="font-family: 'Bowlby One SC', sans-serif;"
+          </Heading>
+          <Heading
+            htmlheading="h2"
+            size="medium"
+            font="h2"
+            stylingclasses="lg:text-8xl"
           >
             WHY INSTANT PHOTOGRAPHY
-          </h2>
+          </Heading>
         </div>
         <div class="col-span-8 col-start-3 mt-5 lg:mt-10">
           <img src="/images/film-img.png" alt="" />
-          <p
-            class="text-[#F2ECD5] lg:text-1xl m-5 lg:m-10"
-            style="font-family: 'Bowlby One SC', sans-serif;"
-          >
+          <Text teksttype="Light" stylingclasses="lg:text-1xl mt-15 mb-15">
             Instant Photography is a testament to life: It all started back in
             the 1940’s with a 3 year old kid. She wanted to see her fathers
             images right away. The father, Edwin Land, embarked on a mission: To
@@ -38,48 +42,52 @@ import MainLayout from "../layouts/MainLayout.astro";
             instant photography is just that: An analogue, life-affirming and
             tactile photography experience. So let’s celebrate life, and make
             memories:-)
-          </p>
+          </Text>
         </div>
       </section>
       <section class="grid grid-cols-12 relative">
         <div class="col-span-12">
           <img
             src="/images/ellipse-bg.png"
-            class="relative w-full overflow-hidden mb-10 lg:mb-20"
+            class="relative w-full mb-10 lg:mb-20"
             alt=""
           />
         </div>
         <div class="grid grid-cols-12 absolute mt-20 lg:mt-40">
-          <h3
-            class="text-[#2D2C2C] text-4xl col-start-4 lg:text-7xl lg:col-start-5"
-            style="font-family: 'Bowlby One SC', sans-serif;"
+          <Heading
+            htmlheading="h2"
+            size="small-dark"
+            font="h2"
+            stylingclasses="text-4xl col-span-3 col-start-4 lg:col-start-5 lg:text-7xl"
           >
             EDWIN
-          </h3>
-          <h3
-            class="text-[#2D2C2C] text-4xl lg:text-7xl col-start-8 mt-6 lg:mt-10"
-            style="font-family: 'Bowlby One SC', sans-serif;"
+          </Heading>
+          <Heading
+            htmlheading="h2"
+            size="small-dark"
+            font="h2"
+            stylingclasses="text-4xl col-span-3 lg:text-7xl col-start-8 mt-6 lg:mt-12"
+            >LAND</Heading
           >
-            LAND
-          </h3>
-          <h4
-            class="text-[#E9F422] text-1x1 lg:text-2xl absolute col-start-8"
-            style=" font-family: 'La Belle Aurore', cursive;"
+          <Heading
+            htmlheading="h4"
+            size="xsmall"
+            font="h4"
+            stylingclasses=" absolute col-start-8 mb-10 lg:mb-15"
           >
             The brain behind
-          </h4>
-          <h4
-            class="text-[#E9F422] text-1x1 lg:text-2xl col-start-4 lg:col-start-5 absolute mt-10 lg:mt-20"
-            style=" font-family: 'La Belle Aurore', cursive;"
+          </Heading>
+          <Heading
+            htmlheading="h4"
+            size="xsmall"
+            font="h4"
+            stylingclasses=" col-start-3 lg:ml-16 absolute mt-10 lg:mt-15"
           >
             Instant Photography
-          </h4>
+          </Heading>
         </div>
-        <div class="absolute flex col-start-2 mt-50 lg:mt-80">
-          <p
-            class="text-[#2D2C2C] text-xs lg:text-2xl"
-            style="font-family: 'Bowlby One SC', sans-serif;"
-          >
+        <div class="absolute grid col-start-2 mt-50 lg:mt-80">
+          <Text teksttype="Dark" stylingclasses="text-2xl5 lg:m-20">
             Edwin Herbert Land was an American scientist and inventor,best known
             as the co-founder of the Polaroid Corporation. He invented
             inexpensive filters for polarizing light, a practical system of
@@ -87,7 +95,7 @@ import MainLayout from "../layouts/MainLayout.astro";
             vision, among other things. His Polaroid instant camera went on sale
             in late 1948 and made it possible for a picture to be taken and
             developed in 60 seconds or less.
-          </p>
+          </Text>
           <img
             src="/images/edwindland.png"
             class="col-start-3 w-40 lg:w-80 object-scale-down mr-10 ml-5 lg:mr-30 lg:ml-10 -rotate-10"
@@ -108,15 +116,16 @@ import MainLayout from "../layouts/MainLayout.astro";
         />
       </div>
       <section class="bg-[#B59A86] grid grid-cols-12 pt-20 pb-20">
-        <h2
-          class="text-5x1 lg:text-7xl col-start-3 col-span-8"
-          style="font-family: 'Bowlby One SC', sans-serif;"
+        <Heading
+          htmlheading="h2"
+          size="small-dark"
+          font="h2"
+          stylingclasses="text-5x1 lg:text-7xl col-start-3 col-span-8"
+          >HOW DOES IT WORK?</Heading
         >
-          HOW DOES IT WORK?
-        </h2>
-        <p
-          class="text-[#2D2C2C] lg:text-2xl col-start-3 col-span-8 mt-5"
-          style="font-family: 'Bowlby One SC', sans-serif;"
+        <Text
+          teksttype="Dark"
+          stylingclasses="lg:text-2xl col-start-3 col-span-8 mt-5"
         >
           To use a Polaroid camera, you insert the instant film pack, frame your
           subject, and press the shutter button. The camera then uses rollers to
@@ -126,7 +135,7 @@ import MainLayout from "../layouts/MainLayout.astro";
           that disappears as the internal chemistry develops the image. You
           shouldn't shake it, but rather let it develop at a stable temperature
           for about 15 minutes to an hour.
-        </p>
+        </Text>
       </section>
       <section class="flex flex-row flex-wrap justify-center lg:flex-nowrap">
         <div class="m-10 p-5">
@@ -135,9 +144,9 @@ import MainLayout from "../layouts/MainLayout.astro";
             class="w-40 h-40 m-auto hover:scale-110"
             alt=""
           />
-          <p class="text-[#F2ECD5]">
+          <Text teksttype="Light" stylingclasses="m-10">
             Put the film in and wait for the camera to print out a black sheet
-          </p>
+          </Text>
         </div>
         <div class="m-10 p-5">
           <img
@@ -145,9 +154,9 @@ import MainLayout from "../layouts/MainLayout.astro";
             class="w-40 h-40 m-auto hover:scale-110"
             alt=""
           />
-          <p class="text-[#F2ECD5]">
+          <Text teksttype="Light" stylingclasses="m-10">
             Press the red button, and watch your picture emerge
-          </p>
+          </Text>
         </div>
         <div class="p-5 m-10">
           <img
@@ -155,9 +164,9 @@ import MainLayout from "../layouts/MainLayout.astro";
             class="w-40 h-40 m-auto hover:scale-110"
             alt=""
           />
-          <p class="text-[#F2ECD5]">
+          <Text teksttype="Light" stylingclasses="m-10">
             Place the newly printed frame on a surface with the backside up
-          </p>
+          </Text>
         </div>
         <div class="p-5 m-10">
           <img
@@ -165,25 +174,29 @@ import MainLayout from "../layouts/MainLayout.astro";
             class="w-40 h-40 m-auto hover:scale-110"
             alt=""
           />
-          <p class="text-[#F2ECD5]">
+          <Text teksttype="Light" stylingclasses="m-10">
             Wait 15-20 minutes before the photo is ready.
-          </p>
+          </Text>
         </div>
       </section>
       <section class="grid grid-cols-12 relative">
         <div class="col-span-12 m-auto z-1">
-          <p
-            class="text-[#E9F422] text-2xl lg:text-4xl mt-40"
-            style=" font-family: 'La Belle Aurore', cursive;"
+          <Heading
+            htmlheading="h4"
+            size="xsmall"
+            font="h4"
+            stylingclasses="text-2xl lg:text-4xl mt-40"
           >
-            Perfectly imperfect.
-          </p>
-          <p
-            class="text-[#E9F422] text-2xl lg:text-4xl"
-            style=" font-family: 'La Belle Aurore', cursive;"
+            Perfectly imperfect
+          </Heading>
+          <Heading
+            htmlheading="h4"
+            size="xsmall"
+            font="h4"
+            stylingclasses="text-2xl lg:text-4xl mt-5"
           >
-            Just like the moment
-          </p>
+            Just like the moment.
+          </Heading>
         </div>
         <div class="z-0 mb-100 lg:mb-160">
           <img
