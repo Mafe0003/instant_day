@@ -5,10 +5,20 @@ import Text from "../components/Text.astro";
 ---
 
 <MainLayout title="Titel">
+      <!-- Noise overlay -->
+  <div 
+  class="pointer-events-none fixed inset-0 z-[9999] mix-blend-multiply opacity-100"
+  style="
+    background-image: url('/images/noise.png'); 
+    background-repeat: repeat; 
+    background-size: 300px 300px; 
+    image-rendering: pixelated;
+  ">
+</div>
   <body>
     <main class="bg-[#2D2C2C]">
-      <section class="grid grid-cols-12">
-        <div class="col-start-3 col-span-6 m-auto lg:col-start-3 lg:col-span-3">
+      <section class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0 py-30">
+        
           <Heading
             htmlheading="h4"
             size="xsmall"
@@ -21,14 +31,22 @@ import Text from "../components/Text.astro";
             htmlheading="h2"
             size="medium"
             font="h2"
-            stylingclasses="lg:text-8xl"
+            stylingclasses="col-start-6 lg:col-start-4 col-span-8 -mt-2 lg:-mt-8"
           >
-            WHY INSTANT PHOTOGRAPHY
+            WHY INSTANT
           </Heading>
-        </div>
-        <div class="col-span-8 col-start-3 mt-5 lg:mt-10">
+          <Heading
+            htmlheading="h2"
+            size="medium"
+            font="h2"
+            stylingclasses="col-start-3 col-span-8 -mt-4 lg:-mt-8"
+          >
+          PHOTOGRAPHY
+          </Heading>
+       
+        <div class="col-span-9 col-start-3 mt-5 lg:mt-10">
           <img src="/images/film-img.png" alt="" />
-          <Text teksttype="Light" stylingclasses="lg:text-1xl mt-15 mb-15">
+          <Text teksttype="Light" stylingclasses=" mt-15 mb-15">
             Instant Photography is a testament to life: It all started back in
             the 1940’s with a 3 year old kid. She wanted to see her fathers
             images right away. The father, Edwin Land, embarked on a mission: To
@@ -44,64 +62,58 @@ import Text from "../components/Text.astro";
           </Text>
         </div>
       </section>
-      <section class="grid grid-cols-12 relative">
-        <div class="col-span-12">
-          <img
-            src="/images/ellipse-bg.png"
-            class="relative w-full bg-cover mb-10 lg:mb-20"
-            alt=""
-          />
-        </div>
-        <div class="grid grid-cols-12 absolute mt-20 lg:mt-40">
-          <Heading
-            htmlheading="h2"
-            size="small-dark"
-            font="h2"
-            stylingclasses="text-4xl col-span-3 col-start-4 lg:col-start-5 lg:text-7xl"
-          >
-            EDWIN
-          </Heading>
-          <Heading
-            htmlheading="h2"
-            size="small-dark"
-            font="h2"
-            stylingclasses="text-4xl col-span-3 lg:text-7xl col-start-8 mt-6 lg:mt-12"
-            >LAND</Heading
-          >
-          <Heading
-            htmlheading="h4"
-            size="xsmall"
-            font="h4"
-            stylingclasses=" absolute col-start-8 mb-10 lg:mb-15"
-          >
-            The brain behind
-          </Heading>
-          <Heading
-            htmlheading="h4"
-            size="xsmall"
-            font="h4"
-            stylingclasses=" col-start-3 lg:ml-16 absolute mt-10 lg:mt-15"
-          >
-            Instant Photography
-          </Heading>
-        </div>
-        <div class="absolute grid col-start-2 mt-50 lg:mt-80">
-          <Text teksttype="Dark" stylingclasses="text-2xl5 lg:m-20">
-            Edwin Herbert Land was an American scientist and inventor,best known
-            as the co-founder of the Polaroid Corporation. He invented
-            inexpensive filters for polarizing light, a practical system of
-            in-camera instant photography, and the retinex theory of color
-            vision, among other things. His Polaroid instant camera went on sale
-            in late 1948 and made it possible for a picture to be taken and
-            developed in 60 seconds or less.
-          </Text>
-          <img
-            src="/images/edwindland.png"
-            class="col-start-3 w-40 lg:w-80 object-scale-down mr-10 ml-5 lg:mr-30 lg:ml-10 -rotate-10"
-            alt=""
-          />
-        </div>
-      </section>
+      <section class="bg-[url('/images/why-bg.png')] bg-cover">
+    <div class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0 py-20">
+    <Heading
+      htmlheading="h2"
+      size="small_dark"
+      font="h2"
+      stylingclasses="col-span-3 col-start-4 lg:col-start-3 mt-5"
+    >
+      EDWIN
+    </Heading>
+      <Heading
+      htmlheading="h4"
+      size="xsmall"
+      font="h4"
+      stylingclasses="col-start-7 col-span-5 mt-8 lg:mt-12"
+    >
+      The brain behind
+    </Heading>
+    <Heading
+      htmlheading="h2"
+      size="small_dark"
+      font="h2"
+      stylingclasses="col-span-3 col-start-7 mt-2 lg:-mt-5"
+    >
+      LAND
+    </Heading>
+  
+    <Heading
+      htmlheading="h4"
+      size="xsmall"
+      font="h4"
+      stylingclasses="col-start-3 lg:col-start-2 col-span-5 -mt-12 lg:-mt-25"
+    >
+      Instant Photography
+    </Heading>
+      <Text teksttype="Dark" stylingclasses="col-start-3 col-span-9">
+        Edwin Herbert Land was an American scientist and inventor, best known
+        as the co-founder of the Polaroid Corporation. He invented inexpensive
+        filters for polarizing light, a practical system of in-camera instant
+        photography, and the retinex theory of color vision, among other things.
+        His Polaroid instant camera went on sale in late 1948 and made it
+        possible for a picture to be taken and developed in 60 seconds or less.
+      </Text>
+      <img
+        src="/images/edwindland.png"
+        class="col-start-3 w-40 lg:w-80 object-scale-down mr-10 ml-5 lg:mr-30 lg:ml-10 -rotate-10"
+        alt=""
+      />
+    </div>
+  </div>
+</section>
+
       <div class="grid grid-cols-12">
         <img
           src="/images/photo-1.png"
