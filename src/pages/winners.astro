@@ -44,12 +44,12 @@ import Button from "../components/Button.astro";
   <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-4 col-span-8">
     It was hard to choose but...
   </Heading>
-  <Heading htmlheading="h3" size="small_light" font="h3_light" stylingclasses="col-start-2 col-span-11 intersect:animate-jump-in intersect:duration-4000">
+  <Heading htmlheading="h3" size="small_light" font="h3_light" stylingclasses="col-start-2 col-span-11 fadeinanimationfravenstre1 text-center">
     here are the Best
   </Heading>
-  <Heading htmlheading="h3" size="small_light" font="h3_light" stylingclasses="col-start-2 col-span-11 -mt-3 lg:-mt-8 intersect:animate-jump intersect:duration-6000">
+ <Heading htmlheading="h3" size="small_light" font="h3_light" stylingclasses="col-start-2 col-span-11 -mt-3 lg:-mt-8 fadeinanimationfravenstre2 text-center">
     of 2025 - nominees:
-  </Heading>
+  </Heading></div>
 
   <!-- FLIP CARDS -->
   <div class="group [perspective:1000px] col-start-3 col-span-3 lg:col-start-2 lg:col-span-3 cursor-pointer">
@@ -154,3 +154,16 @@ import Button from "../components/Button.astro";
 
 
 </MainLayout>
+
+<script>
+  /* Import af Motion One bibliotek */
+	import { animate, stagger, inView, scroll, } from "motion";
+  /* slider heading element ind */
+  inView( ".fadeinanimationfravenstre1" , () =>{
+	animate( ".fadeinanimationfravenstre1", { x: [-2000, 0 ] }, { duration: 2})
+	})
+
+  inView( ".fadeinanimationfravenstre2" , () =>{
+	animate( ".fadeinanimationfravenstre2", { x: [2000, 0 ] }, { duration: 2})
+	})
+</script>

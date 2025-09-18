@@ -1,0 +1,61 @@
+---
+// PersonBuilder.astro
+---
+<section x-data="personBuilder()" class="flex flex-col items-center space-y-3">
+
+  <!-- Hoved -->
+  <div class="relative w-42 h-42 lg:w-52 lg:h-52">
+    <img :src="heads[headIndex]" class="w-full h-full object-cover rounded-lg border-2 border-neutral-700">
+    <button @click="prev('head')" class="absolute left-0 top-1/2 -translate-y-1/2 px-2 py-1 bg-neutral-700 text-white rounded">←</button>
+    <button @click="next('head')" class="absolute right-0 top-1/2 -translate-y-1/2 px-2 py-1 bg-neutral-700 text-white rounded">→</button>
+  </div>
+
+  <!-- Overkrop -->
+  <div class="relative w-42 h-42 lg:w-52 lg:h-52">
+    <img :src="uppers[upperIndex]" class="w-full h-full object-cover rounded-lg border-2 border-neutral-700">
+    <button @click="prev('upper')" class="absolute left-0 top-1/2 -translate-y-1/2 px-2 py-1 bg-neutral-700 text-white rounded">←</button>
+    <button @click="next('upper')" class="absolute right-0 top-1/2 -translate-y-1/2 px-2 py-1 bg-neutral-700 text-white rounded">→</button>
+  </div>
+
+  <!-- Underkrop -->
+  <div class="relative w-42 h-42 lg:w-52 lg:h-52">
+    <img :src="lowers[lowerIndex]" class="w-full h-full object-cover rounded-lg border-2 border-neutral-700">
+    <button @click="prev('lower')" class="absolute left-0 top-1/2 -translate-y-1/2 px-2 py-1 bg-neutral-700 text-white rounded">←</button>
+    <button @click="next('lower')" class="absolute right-0 top-1/2 -translate-y-1/2 px-2 py-1 bg-neutral-700 text-white rounded">→</button>
+  </div>
+
+</section>
+
+<script>
+document.addEventListener('alpine:init', () => {
+  Alpine.data('personBuilder', () => ({
+    headIndex: 0,
+    upperIndex: 0,
+    lowerIndex: 0,
+
+    heads: ['/images/head1.png','/images/head2.png','/images/head3.png','/images/head4.png'],
+    uppers: ['/images/upper1.png','/images/upper2.png','/images/upper3.png','/images/upper4.png'],
+    lowers: ['/images/lower1.png','/images/lower2.png','/images/lower3.png','/images/lower4.png'],
+
+    // Returner det rigtige array baseret på segment-navn
+    getArray(segment) {
+      const map = {
+        head: this.heads,
+        upper: this.uppers,
+        lower: this.lowers
+      }
+      return map[segment];
+    },
+
+    next(segment) {
+      const array = this.getArray(segment);
+      this[segment + 'Index'] = (this[segment + 'Index'] + 1) % array.length;
+    },
+
+    prev(segment) {
+      const array = this.getArray(segment);
+      this[segment + 'Index'] = (this[segment + 'Index'] - 1 + array.length) % array.length;
+    }
+  }))
+})
+</script>
