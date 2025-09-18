@@ -4,24 +4,24 @@
 <section x-data="personBuilder()" class="flex flex-col items-center space-y-3">
 
   <!-- Hoved -->
-  <div class="relative w-42 h-42 lg:w-52 lg:h-52">
-    <img :src="heads[headIndex]" class="w-full h-full object-cover rounded-lg border-2 border-neutral-700">
-    <button @click="prev('head')" class="absolute left-0 top-1/2 -translate-y-1/2 px-2 py-1 bg-neutral-700 text-white rounded">←</button>
-    <button @click="next('head')" class="absolute right-0 top-1/2 -translate-y-1/2 px-2 py-1 bg-neutral-700 text-white rounded">→</button>
+  <div class="relative w-32 h-32 lg:w-52 lg:h-52">
+    <img :src="heads[headIndex]" class="w-full h-full object-cover rounded-lg border-2 border-neutral-700 filter grayscale hover:grayscale-0">
+    <button @click="prev('head')" class="cursor-pointer absolute left-0 top-1/2 -translate-y-1/2 px-2 py-1 bg-neutral-700 text-white rounded">←</button>
+    <button @click="next('head')" class="cursor-pointer absolute right-0 top-1/2 -translate-y-1/2 px-2 py-1 bg-neutral-700 text-white rounded">→</button>
   </div>
 
   <!-- Overkrop -->
-  <div class="relative w-42 h-42 lg:w-52 lg:h-52">
-    <img :src="uppers[upperIndex]" class="w-full h-full object-cover rounded-lg border-2 border-neutral-700">
-    <button @click="prev('upper')" class="absolute left-0 top-1/2 -translate-y-1/2 px-2 py-1 bg-neutral-700 text-white rounded">←</button>
-    <button @click="next('upper')" class="absolute right-0 top-1/2 -translate-y-1/2 px-2 py-1 bg-neutral-700 text-white rounded">→</button>
+  <div class="relative w-32 h-32 lg:w-52 lg:h-52">
+    <img :src="uppers[upperIndex]" class="w-full h-full object-cover rounded-lg border-2 border-neutral-700 filter grayscale hover:grayscale-0">
+    <button @click="prev('upper')" class="cursor-pointer absolute left-0 top-1/2 -translate-y-1/2 px-2 py-1 bg-neutral-700 text-white rounded">←</button>
+    <button @click="next('upper')" class="cursor-pointer absolute right-0 top-1/2 -translate-y-1/2 px-2 py-1 bg-neutral-700 text-white rounded">→</button>
   </div>
 
   <!-- Underkrop -->
-  <div class="relative w-42 h-42 lg:w-52 lg:h-52">
-    <img :src="lowers[lowerIndex]" class="w-full h-full object-cover rounded-lg border-2 border-neutral-700">
-    <button @click="prev('lower')" class="absolute left-0 top-1/2 -translate-y-1/2 px-2 py-1 bg-neutral-700 text-white rounded">←</button>
-    <button @click="next('lower')" class="absolute right-0 top-1/2 -translate-y-1/2 px-2 py-1 bg-neutral-700 text-white rounded">→</button>
+  <div class="relative w-32 h-32 lg:w-52 lg:h-52">
+    <img :src="lowers[lowerIndex]" class="w-full h-full object-cover rounded-lg border-2 border-neutral-700 filter grayscale hover:grayscale-0">
+    <button @click="prev('lower')" class="cursor-pointer absolute left-0 top-1/2 -translate-y-1/2 px-2 py-1 bg-neutral-700 text-white rounded">←</button>
+    <button @click="next('lower')" class="cursor-pointer absolute right-0 top-1/2 -translate-y-1/2 px-2 py-1 bg-neutral-700 text-white rounded">→</button>
   </div>
 
 </section>

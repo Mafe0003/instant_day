@@ -31,7 +31,7 @@ import PersonBuilder from "../components/PersonBuilder.astro";
     <img src="/images/scroll_7.png" alt="Billede 7" class="filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110 absolute w-15 lg:w-45 left-115 lg:left-350 bottom-90 lg:bottom-130 -rotate-20">
     </section>
     <section class="bg-[url(/images/judges_bg.png)] bg-cover py-15 lg:py-20">
-    <Heading htmlheading="h3" size="small_light" font="h3_light" stylingclasses="col-start-4 col-span-8 text-center intersect:animate-fade-up intersect:duration-3000">The judges:</Heading>
+    <Heading htmlheading="h3" size="small_light" font="h3_light" stylingclasses="col-start-4 col-span-8 text-center fadeinleft1">The judges:</Heading>
     <div class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0">
     <Text teksttype="Light" stylingclasses="col-start-3 col-span-9 pt-2 pb-5">Submissions will be reviewed by: </Text>
     <Text teksttype="Light" stylingclasses="col-start-3 col-span-9 py-3">
@@ -48,7 +48,7 @@ import PersonBuilder from "../components/PersonBuilder.astro";
     <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-2 lg:col-start-3 col-span-7 pt-5 lg:pt-10">Scroll through the judges....</Heading>
     <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-5 lg:col-start-5 col-span-8 pt-5 lg:py-7">....and create your very own ultimate judge!</Heading>
     </div>
-  <div class="flex items-center justify-center min-h-screen -my-20 lg:-my-15">
+  <div class="flex items-center justify-center min-h-screen -my-30 lg:-my-15">
   <PersonBuilder />
 </div>
 </section>
@@ -59,7 +59,7 @@ import PersonBuilder from "../components/PersonBuilder.astro";
 
 <section class="bg-[url(/images/sponsors_bg.png)] bg-cover py-15 lg:py-20 my-30">
     <div class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0">
-        <Heading htmlheading="h3" size="small_dark" font="h3_dark" stylingclasses="col-start-3 col-span-6 intersect:animate-fade-down intersect:duration-3000">Sponsors:</Heading>
+        <Heading htmlheading="h3" size="small_dark" font="h3_dark" stylingclasses="col-start-3 col-span-6 fadeinright1">Sponsors:</Heading>
         <Text teksttype="Dark" stylingclasses="col-start-3 col-span-9 pt-2 pb-5">
         Instant Day is not affiliated to any companies within the Instant Photography industry. The only organisation backing us is EK - Business Academy Copenhagen. At least so far;-)</Text>
         <a href="https://www.ek.dk/kurser?educationTypes=Akademiuddannelse&gad_source=1&gad_campaignid=1048748118&gbraid=0AAAAAD5ytlKfMThJ7Lxvj3Njg69NM_Uzp&gclid=CjwKCAjwlaTGBhANEiwAoRgXBd28GRkWp1gZeUENGifJXcpj9aAitpnwJbbodXnSvdnevxCY_7U0LBoCh3EQAvD_BwE" 
@@ -74,3 +74,45 @@ import PersonBuilder from "../components/PersonBuilder.astro";
 </a>
 </section>
 </MainLayout>
+
+<script>
+  /* Import af Motion One bibliotek */
+	import { animate, stagger, inView, scroll, } from "motion";
+  /* slider heading element ind */
+  inView( ".fadeinleft1" , () =>{
+	animate( ".fadeinleft1", { x: [-2000, 0 ] }, { duration: 1.5})
+	})
+
+  inView( ".fadeinright1" , () =>{
+	animate( ".fadeinright1", { x: [2000, 0 ] }, { duration: 1.5})
+	})
+
+   inView( ".fadeup1" , () =>{
+	animate( ".fadeup1", { y: [2000, 0 ] }, { duration: 1})
+	})
+
+    inView( ".fadeinleft2" , () =>{
+	animate( ".fadeinleft2", { x: [-2000, 0 ] }, { duration: 1.5})
+	})
+
+    inView( ".fadeinright2" , () =>{
+	animate( ".fadeinright2", { x: [2000, 0 ] }, { duration: 1.5})
+	})
+
+   inView( ".fadeinleft3" , () =>{
+	animate( ".fadeinleft3", { x: [-2000, 0 ] }, { duration: 1.5})
+	})
+
+  inView( ".fadeinright3" , () =>{
+	animate( ".fadeinright3", { x: [2000, 0 ] }, { duration: 1.5})
+	})
+
+   inView( ".fadeup2" , () =>{
+	animate( ".fadeup2", { y: [2000, 0 ] }, { duration: 1.5})
+	})
+
+  inView( ".fadeinleft4" , () =>{
+	animate( ".fadeinleft4", { x: [-2000, 0 ] }, { duration: 1.5})
+	})
+
+</script> 
