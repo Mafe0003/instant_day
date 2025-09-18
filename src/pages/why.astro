@@ -5,48 +5,76 @@ import Text from "../components/Text.astro";
 ---
 
 <MainLayout title="Titel">
-      <!-- Noise overlay -->
-  <div 
-  class="pointer-events-none fixed inset-0 z-[9999] mix-blend-multiply opacity-100"
-  style="
+  <!-- Noise overlay -->
+  <div
+    class="pointer-events-none fixed inset-0 z-[9999] mix-blend-multiply opacity-100"
+    style="
     background-image: url('/images/noise.png'); 
     background-repeat: repeat; 
     background-size: 300px 300px; 
     image-rendering: pixelated;
-  ">
-</div>
+  "
+  >
+  </div>
   <body>
     <main class="bg-[#2D2C2C]">
-      <section class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0 py-30">
-        
-          <Heading
-            htmlheading="h4"
-            size="xsmall"
-            font="h4"
-            stylingclasses="col-start-5 col-span-4"
-          >
-            Why use it?
-          </Heading>
-          <Heading
-            htmlheading="h2"
-            size="medium"
-            font="h2"
-            stylingclasses="col-start-6 lg:col-start-4 col-span-8 -mt-2 lg:-mt-8"
-          >
-            WHY INSTANT
-          </Heading>
-          <Heading
-            htmlheading="h2"
-            size="medium"
-            font="h2"
-            stylingclasses="col-start-3 col-span-8 -mt-4 lg:-mt-8"
-          >
+      <div class="relative mb-20 z-0">
+        <img
+          src="/images/corner-pic-1.png"
+          class="w-30 lg:w-60 object-scale-down absolute -ml-10 intersect:animate-fade-right intersect:duration-3000"
+          alt=""
+        />
+      </div>
+      <div class="relative mb-20 z-0">
+        <img
+          src="/images/corner-pic-2.png"
+          class="w-20 lg:w-40 object-scale-down absolute right-0 mt-80 lg:mt-150 intersect:animate-fade-right intersect:duration-3000"
+          alt=""
+        />
+      </div>
+      <div class="relative mb-20 z-0">
+        <img
+          src="/images/corner-pic-3.png"
+          class="w-20 lg:w-40 object-scale-down absolute mt-120 lg:mt-250 intersect:animate-fade-right intersect:duration-3000"
+          alt=""
+        />
+      </div>
+      <div class="relative mb-20 z-0">
+        <img
+          src="/images/corner-pic-4.png"
+          class="w-20 lg:w-30 object-scale-down absolute right-0 mt-170 lg:mt-320 intersect:animate-fade-right intersect:duration-3000"
+          alt=""
+        />
+      </div>
+      <section class="m-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0">
+        <Heading
+          htmlheading="h4"
+          size="xsmall"
+          font="h4"
+          stylingclasses="col-start-6 col-span-3 intersect:animate-fade-up intersect:duration-3000"
+        >
+          Why use it?
+        </Heading>
+        <Heading
+          htmlheading="h2"
+          size="medium"
+          font="h2"
+          stylingclasses="col-start-3 lg:col-start-2 col-span-11 lg:ml-17 -mt-2 lg:-mt-6 intersect:animate-fade-up intersect:duration-3000"
+        >
+          WHY INSTANT
+        </Heading>
+        <Heading
+          htmlheading="h2"
+          size="medium"
+          font="h2"
+          stylingclasses="col-start-2 col-span-10 ml-10 -mt-2 lg:-mt-6 intersect:animate-fade-up intersect:duration-3000"
+        >
           PHOTOGRAPHY
-          </Heading>
-       
-        <div class="col-span-9 col-start-3 mt-5 lg:mt-10">
+        </Heading>
+
+        <div class="col-span-9 col-start-3 mt-5 lg:mt-10 p-10">
           <img src="/images/film-img.png" alt="" />
-          <Text teksttype="Light" stylingclasses=" mt-15 mb-15">
+          <Text teksttype="Light" stylingclasses=" mt-15 mb-15 lg:mb-35">
             Instant Photography is a testament to life: It all started back in
             the 1940’s with a 3 year old kid. She wanted to see her fathers
             images right away. The father, Edwin Land, embarked on a mission: To
@@ -63,165 +91,155 @@ import Text from "../components/Text.astro";
         </div>
       </section>
       <section class="bg-[url('/images/why-bg.png')] bg-cover">
-    <div class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0 py-20">
-    <Heading
-      htmlheading="h2"
-      size="small_dark"
-      font="h2"
-      stylingclasses="col-span-3 col-start-4 lg:col-start-3 mt-5"
-    >
-      EDWIN
-    </Heading>
-      <Heading
-      htmlheading="h4"
-      size="xsmall"
-      font="h4"
-      stylingclasses="col-start-7 col-span-5 mt-8 lg:mt-12"
-    >
-      The brain behind
-    </Heading>
-    <Heading
-      htmlheading="h2"
-      size="small_dark"
-      font="h2"
-      stylingclasses="col-span-3 col-start-7 mt-2 lg:-mt-5"
-    >
-      LAND
-    </Heading>
-  
-    <Heading
-      htmlheading="h4"
-      size="xsmall"
-      font="h4"
-      stylingclasses="col-start-3 lg:col-start-2 col-span-5 -mt-12 lg:-mt-25"
-    >
-      Instant Photography
-    </Heading>
-      <Text teksttype="Dark" stylingclasses="col-start-3 col-span-9">
-        Edwin Herbert Land was an American scientist and inventor, best known
-        as the co-founder of the Polaroid Corporation. He invented inexpensive
-        filters for polarizing light, a practical system of in-camera instant
-        photography, and the retinex theory of color vision, among other things.
-        His Polaroid instant camera went on sale in late 1948 and made it
-        possible for a picture to be taken and developed in 60 seconds or less.
-      </Text>
-      <img
-        src="/images/edwindland.png"
-        class="col-start-3 w-40 lg:w-80 object-scale-down mr-10 ml-5 lg:mr-30 lg:ml-10 -rotate-10"
-        alt=""
-      />
-    </div>
-  </div>
-</section>
+        <div
+          class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0 py-20"
+        >
+          <Heading
+            htmlheading="h2"
+            size="small_dark"
+            font="h2"
+            stylingclasses="col-span-3 col-start-3 mt-5 lg:mt-25 intersect:animate-fade-left intersect:duration-3000"
+          >
+            EDWIN
+          </Heading>
+          <Heading
+            htmlheading="h4"
+            size="xsmall"
+            font="h4"
+            stylingclasses="col-start-6 col-span-5 ml-7 lg:ml-15 mt-8 lg:mt-32 intersect:animate-fade-right intersect:duration-3000"
+          >
+            The brain behind
+          </Heading>
+          <Heading
+            htmlheading="h2"
+            size="small_dark"
+            font="h2"
+            stylingclasses="col-span-3 col-start-7 -mt-1 -ml-3 lg:-mt-5 intersect:animate-fade-left intersect:duration-3000"
+          >
+            LAND
+          </Heading>
 
-      <div class="grid grid-cols-12">
-        <img
-          src="/images/photo-1.png"
-          class="col-start-4 col-span-3 lg:h-90 lg:w-80"
-          alt=""
-        />
-        <img
-          src="/images/photo-2.png"
-          class="col-start-8 col-span-3 mt-40 mb-20"
-          alt=""
-        />
-      </div>
-      <section class="bg-[#B59A86] grid grid-cols-12 pt-20 pb-20">
-        <Heading
-          htmlheading="h2"
-          size="small-dark"
-          font="h2"
-          stylingclasses="text-5x1 lg:text-7xl col-start-3 col-span-8"
-          >HOW DOES IT WORK?</Heading
-        >
-        <Text
-          teksttype="Dark"
-          stylingclasses="lg:text-2xl col-start-3 col-span-8 mt-5"
-        >
-          To use a Polaroid camera, you insert the instant film pack, frame your
-          subject, and press the shutter button. The camera then uses rollers to
-          squeeze a developer from a capsule onto the light-sensitive film,
-          which contains dyes that spread and form the image. The image then
-          emerges from the camera with a protective layer, like a gray haze,
-          that disappears as the internal chemistry develops the image. You
-          shouldn't shake it, but rather let it develop at a stable temperature
-          for about 15 minutes to an hour.
-        </Text>
-      </section>
-      <section class="flex flex-row flex-wrap justify-center lg:flex-nowrap">
-        <div class="m-10 p-5">
-          <img
-            src="/images/guide-1.png"
-            class="w-40 h-40 m-auto hover:scale-110"
-            alt=""
-          />
-          <Text teksttype="Light" stylingclasses="m-10">
-            Put the film in and wait for the camera to print out a black sheet
-          </Text>
-        </div>
-        <div class="m-10 p-5">
-          <img
-            src="/images/guide-2.png"
-            class="w-40 h-40 m-auto hover:scale-110"
-            alt=""
-          />
-          <Text teksttype="Light" stylingclasses="m-10">
-            Press the red button, and watch your picture emerge
-          </Text>
-        </div>
-        <div class="p-5 m-10">
-          <img
-            src="/images/guide-3.png"
-            class="w-40 h-40 m-auto hover:scale-110"
-            alt=""
-          />
-          <Text teksttype="Light" stylingclasses="m-10">
-            Place the newly printed frame on a surface with the backside up
-          </Text>
-        </div>
-        <div class="p-5 m-10">
-          <img
-            src="/images/guide-4.png"
-            class="w-40 h-40 m-auto hover:scale-110"
-            alt=""
-          />
-          <Text teksttype="Light" stylingclasses="m-10">
-            Wait 15-20 minutes before the photo is ready.
-          </Text>
-        </div>
-      </section>
-      <section class="grid grid-cols-12 relative">
-        <div class="col-span-12 m-auto z-1">
           <Heading
             htmlheading="h4"
             size="xsmall"
             font="h4"
-            stylingclasses="text-2xl lg:text-4xl mt-40"
+            stylingclasses="col-start-2 col-span-5 -mt-12 -ml-5 lg:col-start-3 lg:-ml-20 lg:-mt-26 intersect:animate-fade-right intersect:duration-3000"
           >
-            Perfectly imperfect
+            Instant Photography
           </Heading>
-          <Heading
-            htmlheading="h4"
-            size="xsmall"
-            font="h4"
-            stylingclasses="text-2xl lg:text-4xl mt-5"
-          >
-            Just like the moment.
-          </Heading>
-        </div>
-        <div class="z-0 mb-100 lg:mb-160">
+          <div class="col-start-2 col-span-6 mt-10 mb-20">
+            <Text teksttype="Dark">
+              Edwin Herbert Land was an American scientist and inventor, best
+              known as the co-founder of the Polaroid Corporation. He invented
+              inexpensive filters for polarizing light, a practical system of
+              in-camera instant photography, and the retinex theory of color
+              vision, among other things. His Polaroid instant camera went on
+              sale in late 1948 and made it possible for a picture to be taken
+              and developed in 60 seconds or less.
+            </Text>
+          </div>
           <img
-            src="/images/photo-3.png"
-            class="w-40 lg:w-80 object-scale-down absolute top-0"
-            alt=""
-          />
-          <img
-            src="/images/photo-4.png"
-            class="w-60 lg:w-70 object-scale-down absolute right-0"
+            src="/images/edwindland.png"
+            class="mt-15 lg:mt-5 lg:col-start-8 col-span-3 ml-15 -rotate-10"
             alt=""
           />
         </div>
       </section>
     </main>
+
+    <div class="grid grid-cols-12 mt-10 lg:mt-40">
+      <img
+        src="/images/photo-1.png"
+        class="col-start-3 col-span-4 lg:col-start-4 lg:col-span-3 filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110"
+        alt=""
+      />
+      <img
+        src="/images/photo-2.png"
+        class="col-start-8 col-span-4 lg:-ml-30 lg:col-start-9 lg:col-span-3 mt-40 mb-20 filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110"
+        alt=""
+      />
+    </div>
+    <section class="bg-[#B59A86] grid grid-cols-12 pt-20 pb-20">
+      <Heading
+        htmlheading="h2"
+        size="small-dark"
+        font="h2"
+        stylingclasses="text-5x1 lg:text-7xl col-start-3 col-span-8"
+        >HOW DOES IT WORK?</Heading
+      >
+      <Text
+        teksttype="Dark"
+        stylingclasses="lg:text-2xl col-start-3 col-span-8 mt-5"
+      >
+        To use a Polaroid camera, you insert the instant film pack, frame your
+        subject, and press the shutter button. The camera then uses rollers to
+        squeeze a developer from a capsule onto the light-sensitive film, which
+        contains dyes that spread and form the image. The image then emerges
+        from the camera with a protective layer, like a gray haze, that
+        disappears as the internal chemistry develops the image. You shouldn't
+        shake it, but rather let it develop at a stable temperature for about 15
+        minutes to an hour.
+      </Text>
+    </section>
+    <section
+      class="flex flex-row flex-wrap justify-center mx-20 my-10 lg:flex-nowrap"
+    >
+      <div class="">
+        <img src="/images/guide-1.png" class="w-40 h-40 m-auto" alt="" />
+        <Text teksttype="Light" stylingclasses="m-10">
+          Put the film in and wait for the camera to print out a black sheet
+        </Text>
+      </div>
+      <div class="">
+        <img src="/images/guide-2.png" class="w-40 h-40 m-auto" alt="" />
+        <Text teksttype="Light" stylingclasses="m-10">
+          Press the red button, and watch your picture emerge
+        </Text>
+      </div>
+      <div class="">
+        <img src="/images/guide-3.png" class="w-40 h-40 m-auto" alt="" />
+        <Text teksttype="Light" stylingclasses="m-10">
+          Place the newly printed frame on a surface with the backside up
+        </Text>
+      </div>
+      <div class="">
+        <img src="/images/guide-4.png" class="w-40 h-40 m-auto" alt="" />
+        <Text teksttype="Light" stylingclasses="m-10">
+          Wait 15-20 minutes before the photo is ready.
+        </Text>
+      </div>
+    </section>
+    <section class="grid grid-cols-12 relative">
+      <div class="col-span-12 m-auto z-1">
+        <Heading
+          htmlheading="h4"
+          size="xsmall"
+          font="h4"
+          stylingclasses="text-2xl lg:text-4xl mt-40"
+        >
+          Perfectly imperfect
+        </Heading>
+        <Heading
+          htmlheading="h4"
+          size="xsmall"
+          font="h4"
+          stylingclasses="text-2xl lg:text-4xl mt-5"
+        >
+          Just like the moment.
+        </Heading>
+      </div>
+      <div class="z-0 mb-100 lg:mb-160">
+        <img
+          src="/images/photo-3.png"
+          class="w-40 lg:w-80 object-scale-down absolute top-0"
+          alt=""
+        />
+        <img
+          src="/images/photo-4.png"
+          class="w-60 lg:w-70 object-scale-down absolute right-0"
+          alt=""
+        />
+      </div>
+    </section>
   </body>
 </MainLayout>
