@@ -6,6 +6,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
+import PersonBuilder from "../components/PersonBuilder.astro";
 ---
 <MainLayout title="Titel">
       <!-- Noise overlay -->
@@ -44,12 +45,19 @@ import Button from "../components/Button.astro";
     </Text>
     </div>
     <div class="grid grid-cols-12">
-    <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-2 lg:col-start-4 col-span-5 pt-5 lg:pt-20">Have fun and....</Heading>
-    <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-5 lg:col-start-6 col-span-7 pt-10 lg:pt-10">....let's celebrate the imperfect!</Heading>
+    <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-2 lg:col-start-3 col-span-7 pt-5 lg:pt-10">Scroll through the judges....</Heading>
+    <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-5 lg:col-start-5 col-span-8 pt-5 lg:py-7">....and create your very own ultimate judge!</Heading>
     </div>
+  <div class="flex items-center justify-center min-h-screen -my-20 lg:-my-15">
+  <PersonBuilder />
+</div>
+</section>
+<section class="grid grid-cols-12">
+    <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-2 lg:col-start-4 col-span-5 pt-15 lg:pt-20">Have fun and....</Heading>
+    <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-5 lg:col-start-6 col-span-7 pt-10 -mb-10">....let's celebrate the imperfect!</Heading>
 </section>
 
-<section class="bg-[url(/images/sponsors_bg.png)] bg-cover py-15 lg:py-20 mb-20">
+<section class="bg-[url(/images/sponsors_bg.png)] bg-cover py-15 lg:py-20 my-30">
     <div class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0">
         <Heading htmlheading="h3" size="small_dark" font="h3_dark" stylingclasses="col-start-3 col-span-6 intersect:animate-fade-down intersect:duration-3000">Sponsors:</Heading>
         <Text teksttype="Dark" stylingclasses="col-start-3 col-span-9 pt-2 pb-5">
