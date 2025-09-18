@@ -32,7 +32,7 @@ import Button from "../components/Button.astro";
      <section class="bg-[url(/images/winner_bg.png)] bg-cover relative">
         <div class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0 py-20">
            <Heading htmlheading="h3" size="small_dark" font="h3_dark" stylingclasses="col-start-4 col-span-8 intersect:animate-fade-left intersect:duration-3000">The winner</Heading>
-           <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-8 col-span-3 -mt-2 lg:-mt-5 intersect:animate-fade-right intersect:duration-3000">of 2025!</Heading>
+           <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-8 col-span-3 -mt-2 lg:-mt-5 fadeinright3">of 2025!</Heading>
            <img src="/images/winner_img.png" alt="winner_instant" class="z-20 pt-8 lg:pt-15 col-start-2 col-span-7 w-full max-w-full h-auto filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110"
   >
            <img src="/images/winner_description.png" alt="winer_description" class="absolute w-60 lg:w-120 left-45 lg:left-170 bottom-30 lg:bottom-50 -rotate-5"
@@ -134,7 +134,7 @@ import Button from "../components/Button.astro";
   </div>
 
   <!-- Footer-tekst -->
-  <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-4 col-span-6 pt-15 lg:pt-30 lg:pb-20 text-center">
+  <Heading htmlheading="h4" size="xsmall" font="h4" stylingclasses="col-start-4 col-span-6 pt-15 lg:pt-30 lg:pb-20 text-center fadeinleft2">
     What are you waiting for? Let's see your instants!
   </Heading>
 </section>
@@ -171,4 +171,11 @@ import Button from "../components/Button.astro";
 	animate( ".fadeup1", { y: [2000, 0 ] }, { duration: 0.5})
 	})
 
+  inView( ".fadeinleft2" , () =>{
+	animate( ".fadeinleft2", { x: [-2000, 0 ] }, { duration: 1.5})
+	})
+
+ inView( ".fadeinright3" , () =>{
+	animate( ".fadeinright3", { x: [2000, 0 ] }, { duration: 1.5})
+	})
 </script> 

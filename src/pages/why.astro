@@ -21,28 +21,28 @@ import Text from "../components/Text.astro";
       <div class="relative mb-20 z-0">
         <img
           src="/images/corner-pic-1.png"
-          class="w-30 lg:w-60 object-scale-down absolute -ml-10 intersect:animate-fade-right intersect:duration-3000"
+          class="w-30 lg:w-60 object-scale-down absolute -ml-10 transition duration-300 hover:scale-110 intersect:animate-fade-right intersect:duration-300 -rotate-12"
           alt=""
         />
       </div>
       <div class="relative mb-20 z-0">
         <img
           src="/images/corner-pic-2.png"
-          class="w-20 lg:w-40 object-scale-down absolute right-0 mt-80 lg:mt-150 intersect:animate-fade-right intersect:duration-3000"
+          class="w-20 lg:w-40 object-scale-down absolute right-0 mt-80 lg:mt-150 transition duration-300 hover:scale-110 intersect:animate-fade-right intersect:duration-300"
           alt=""
         />
       </div>
       <div class="relative mb-20 z-0">
         <img
           src="/images/corner-pic-3.png"
-          class="w-20 lg:w-40 object-scale-down absolute mt-120 lg:mt-250 intersect:animate-fade-right intersect:duration-3000"
+          class="w-20 lg:w-40 object-scale-down absolute mt-120 lg:mt-250 transition duration-300 hover:scale-110 intersect:animate-fade-right intersect:duration-300"
           alt=""
         />
       </div>
       <div class="relative mb-20 z-0">
         <img
           src="/images/corner-pic-4.png"
-          class="w-20 lg:w-30 object-scale-down absolute right-0 mt-170 lg:mt-320 intersect:animate-fade-right intersect:duration-3000"
+          class="w-20 lg:w-30 object-scale-down absolute right-0 mt-170 lg:mt-320 transition duration-300 hover:scale-110 intersect:animate-fade-right intersect:duration-300"
           alt=""
         />
       </div>
@@ -59,7 +59,7 @@ import Text from "../components/Text.astro";
           htmlheading="h2"
           size="medium"
           font="h2"
-          stylingclasses="col-start-3 lg:col-start-2 col-span-11 lg:ml-17 -mt-2 lg:-mt-6 intersect:animate-fade-up intersect:duration-3000"
+          stylingclasses="col-start-3 lg:col-start-2 col-span-11 lg:ml-17 -mt-2 lg:-mt-6 intersect:animate-fade-right intersect:duration-3000"
         >
           WHY INSTANT
         </Heading>
@@ -67,14 +67,14 @@ import Text from "../components/Text.astro";
           htmlheading="h2"
           size="medium"
           font="h2"
-          stylingclasses="col-start-2 col-span-10 ml-10 -mt-2 lg:-mt-6 intersect:animate-fade-up intersect:duration-3000"
+          stylingclasses="col-start-2 col-span-10 ml-10 -mt-2 lg:-mt-6 intersect:animate-fade-left intersect:duration-3000"
         >
           PHOTOGRAPHY
         </Heading>
 
         <div class="col-span-9 col-start-3 mt-5 lg:mt-10 p-10">
           <img src="/images/film-img.png" alt="" />
-          <Text teksttype="Light" stylingclasses=" mt-15 mb-15 lg:mb-35">
+          <Text teksttype="Light" stylingclasses=" mt-15 mb-15 lg:mb-35 fadeinleft5">
             Instant Photography is a testament to life: It all started back in
             the 1940’s with a 3 year old kid. She wanted to see her fathers
             images right away. The father, Edwin Land, embarked on a mission: To
@@ -92,13 +92,13 @@ import Text from "../components/Text.astro";
       </section>
       <section class="bg-[url('/images/why-bg.png')] bg-cover">
         <div
-          class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0 py-20"
+          class="mx-auto max-w-screen-lg px-4 grid grid-cols-12 gap-y-0 py-5"
         >
           <Heading
             htmlheading="h2"
             size="small_dark"
             font="h2"
-            stylingclasses="col-span-3 col-start-3 mt-5 lg:mt-25 intersect:animate-fade-left intersect:duration-3000"
+            stylingclasses="col-span-3 col-start-3 mt-5 lg:mt-25 fadeinleft1"
           >
             EDWIN
           </Heading>
@@ -106,7 +106,7 @@ import Text from "../components/Text.astro";
             htmlheading="h4"
             size="xsmall"
             font="h4"
-            stylingclasses="col-start-6 col-span-5 ml-7 lg:ml-15 mt-8 lg:mt-32 intersect:animate-fade-right intersect:duration-3000"
+            stylingclasses="col-start-6 col-span-5 ml-7 lg:ml-15 mt-8 lg:mt-32"
           >
             The brain behind
           </Heading>
@@ -114,7 +114,7 @@ import Text from "../components/Text.astro";
             htmlheading="h2"
             size="small_dark"
             font="h2"
-            stylingclasses="col-span-3 col-start-7 -mt-1 -ml-3 lg:-mt-5 intersect:animate-fade-left intersect:duration-3000"
+            stylingclasses="col-span-3 col-start-7 -mt-1 -ml-3 lg:-mt-5 fadeinright1"
           >
             LAND
           </Heading>
@@ -123,12 +123,12 @@ import Text from "../components/Text.astro";
             htmlheading="h4"
             size="xsmall"
             font="h4"
-            stylingclasses="col-start-2 col-span-5 -mt-12 -ml-5 lg:col-start-3 lg:-ml-20 lg:-mt-26 intersect:animate-fade-right intersect:duration-3000"
+            stylingclasses="col-start-2 col-span-5 -mt-12 -ml-5 lg:col-start-3 lg:-ml-20 lg:-mt-26"
           >
             Instant Photography
           </Heading>
           <div class="col-start-2 col-span-6 mt-10 mb-20">
-            <Text teksttype="Dark">
+            <Text teksttype="Dark" stylingclasses="fadeup2">
               Edwin Herbert Land was an American scientist and inventor, best
               known as the co-founder of the Polaroid Corporation. He invented
               inexpensive filters for polarizing light, a practical system of
@@ -147,29 +147,29 @@ import Text from "../components/Text.astro";
       </section>
     </main>
 
-    <div class="grid grid-cols-12 mt-10 lg:mt-40">
+    <div class="grid grid-cols-12 mt-20 lg:my-30">
       <img
         src="/images/photo-1.png"
-        class="col-start-3 col-span-4 lg:col-start-4 lg:col-span-3 filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110"
+        class="col-start-3 col-span-4 lg:col-start-4 lg:col-span-3 filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110 -rotate-12"
         alt=""
       />
       <img
         src="/images/photo-2.png"
-        class="col-start-8 col-span-4 lg:-ml-30 lg:col-start-9 lg:col-span-3 mt-40 mb-20 filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110"
+        class="col-start-8 col-span-4 lg:-ml-30 lg:col-start-9 lg:col-span-3 mt-40 mb-20 filter grayscale hover:grayscale-0 transition duration-300 hover:scale-110 rotate-10"
         alt=""
       />
     </div>
     <section class="bg-[#B59A86] grid grid-cols-12 pt-20 pb-20">
       <Heading
         htmlheading="h2"
-        size="small-dark"
+        size="small_dark"
         font="h2"
-        stylingclasses="text-5x1 lg:text-7xl col-start-3 col-span-8"
+        stylingclasses="col-start-3 col-span-8 text-center fadeinleft3"
         >HOW DOES IT WORK?</Heading
       >
       <Text
         teksttype="Dark"
-        stylingclasses="lg:text-2xl col-start-3 col-span-8 mt-5"
+        stylingclasses="col-start-3 col-span-8 mt-5 fadeinright3"
       >
         To use a Polaroid camera, you insert the instant film pack, frame your
         subject, and press the shutter button. The camera then uses rollers to
@@ -184,27 +184,27 @@ import Text from "../components/Text.astro";
     <section
       class="flex flex-row flex-wrap justify-center mx-20 my-10 lg:flex-nowrap"
     >
-      <div class="">
-        <img src="/images/guide-1.png" class="w-40 h-40 m-auto" alt="" />
-        <Text teksttype="Light" stylingclasses="m-10">
+      <div class="py-5 lg:py-10">
+        <img src="/images/guide-1.png" class="w-30 h-30 lg:w-40 lg:h-40 m-auto" alt="" />
+        <Text teksttype="Nominees" stylingclasses="m-2 lg:m-4 px-20 lg:px-5 text-center">
           Put the film in and wait for the camera to print out a black sheet
         </Text>
       </div>
-      <div class="">
-        <img src="/images/guide-2.png" class="w-40 h-40 m-auto" alt="" />
-        <Text teksttype="Light" stylingclasses="m-10">
+      <div class="py-5 lg:py-10">
+        <img src="/images/guide-2.png" class="w-30 h-30 lg:w-40 lg:h-40 m-auto" alt="" />
+        <Text teksttype="Nominees" stylingclasses="m-2 lg:m-4 px-20 lg:px-5 text-center">
           Press the red button, and watch your picture emerge
         </Text>
       </div>
-      <div class="">
-        <img src="/images/guide-3.png" class="w-40 h-40 m-auto" alt="" />
-        <Text teksttype="Light" stylingclasses="m-10">
+      <div class="py-5 lg:py-10">
+        <img src="/images/guide-3.png" class="w-30 h-30 lg:w-40 lg:h-40 m-auto" alt="" />
+        <Text teksttype="Nominees" stylingclasses="m-2 lg:m-4 px-20 lg:px-5 text-center">
           Place the newly printed frame on a surface with the backside up
         </Text>
       </div>
-      <div class="">
-        <img src="/images/guide-4.png" class="w-40 h-40 m-auto" alt="" />
-        <Text teksttype="Light" stylingclasses="m-10">
+      <div class="py-5 lg:py-10">
+        <img src="/images/guide-4.png" class="w-30 h-30 lg:w-40 lg:h-40 m-auto" alt="" />
+        <Text teksttype="Nominees" stylingclasses="m-2 lg:m-4 px-20 lg:px-5 text-center">
           Wait 15-20 minutes before the photo is ready.
         </Text>
       </div>
@@ -215,7 +215,7 @@ import Text from "../components/Text.astro";
           htmlheading="h4"
           size="xsmall"
           font="h4"
-          stylingclasses="text-2xl lg:text-4xl mt-40"
+          stylingclasses="text-2xl lg:text-4xl mt-40 fadeinright4"
         >
           Perfectly imperfect
         </Heading>
@@ -223,23 +223,77 @@ import Text from "../components/Text.astro";
           htmlheading="h4"
           size="xsmall"
           font="h4"
-          stylingclasses="text-2xl lg:text-4xl mt-5"
+          stylingclasses="text-2xl lg:text-4xl mt-5 fadeinleft6"
         >
           Just like the moment.
         </Heading>
       </div>
-      <div class="z-0 mb-100 lg:mb-160">
+      <div class="z-0 mb-60 lg:mb-110">
         <img
           src="/images/photo-3.png"
-          class="w-40 lg:w-80 object-scale-down absolute top-0"
+          class="w-20 lg:w-60 object-scale-down absolute top-0 transition duration-300 hover:scale-110 "
           alt=""
         />
         <img
           src="/images/photo-4.png"
-          class="w-60 lg:w-70 object-scale-down absolute right-0"
+          class="w-30 lg:w-70 object-scale-down absolute right-0 transition duration-300 hover:scale-110 "
           alt=""
         />
       </div>
     </section>
   </body>
 </MainLayout>
+
+
+<script>
+  /* Import af Motion One bibliotek */
+	import { animate, stagger, inView, scroll, } from "motion";
+  /* slider heading element ind */
+  inView( ".fadeinleft1" , () =>{
+	animate( ".fadeinleft1", { x: [-2000, 0 ] }, { duration: 1.5})
+	})
+
+  inView( ".fadeinright1" , () =>{
+	animate( ".fadeinright1", { x: [2000, 0 ] }, { duration: 1.5})
+	})
+
+   inView( ".fadeup1" , () =>{
+	animate( ".fadeup1", { y: [2000, 0 ] }, { duration: 1})
+	})
+
+    inView( ".fadeinleft2" , () =>{
+	animate( ".fadeinleft2", { x: [-2000, 0 ] }, { duration: 1.5})
+	})
+
+    inView( ".fadeinright2" , () =>{
+	animate( ".fadeinright2", { x: [2000, 0 ] }, { duration: 1.5})
+	})
+
+   inView( ".fadeinleft3" , () =>{
+	animate( ".fadeinleft3", { x: [-2000, 0 ] }, { duration: 1.5})
+	})
+
+  inView( ".fadeinright3" , () =>{
+	animate( ".fadeinright3", { x: [2000, 0 ] }, { duration: 1.5})
+	})
+
+   inView( ".fadeup2" , () =>{
+	animate( ".fadeup2", { y: [2000, 0 ] }, { duration: 1.5})
+	})
+
+  inView( ".fadeinleft4" , () =>{
+	animate( ".fadeinleft4", { x: [-2000, 0 ] }, { duration: 1.5})
+	})
+
+  inView( ".fadeinleft5" , () =>{
+	animate( ".fadeinleft5", { x: [-2000, 0 ] }, { duration: 1.5})
+	})
+
+ inView( ".fadeinright4" , () =>{
+	animate( ".fadeinright4", { x: [2000, 0 ] }, { duration: 1.5})
+	})
+
+  inView( ".fadeinleft6" , () =>{
+	animate( ".fadeinleft6", { x: [-2000, 0 ] }, { duration: 1.5})
+	})
+</script> 

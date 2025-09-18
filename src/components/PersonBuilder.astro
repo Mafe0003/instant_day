@@ -1,7 +1,7 @@
 ---
 // PersonBuilder.astro
 ---
-<section x-data="personBuilder()" class="flex flex-col items-center space-y-3">
+<section x-data="personBuilder()" class="flex flex-col items-center space-y-3 rotate-8">
 
   <!-- Hoved -->
   <div class="relative w-32 h-32 lg:w-52 lg:h-52">
@@ -26,7 +26,69 @@
 
 </section>
 
+<section x-data="personBuilder()" class="flex flex-col items-center space-y-3 -rotate-6 pt-20">
+
+  <!-- Hoved -->
+  <div class="relative w-22 h-22 lg:w-32 lg:h-32">
+    <img :src="heads[headIndex]" class="w-full h-full object-cover rounded-lg border-2 border-neutral-700 filter grayscale hover:grayscale-0">
+    <button @click="prev('head')" class="cursor-pointer absolute left-0 top-1/2 -translate-y-1/2 px-2 py-1 bg-neutral-700 text-white rounded">←</button>
+    <button @click="next('head')" class="cursor-pointer absolute right-0 top-1/2 -translate-y-1/2 px-2 py-1 bg-neutral-700 text-white rounded">→</button>
+  </div>
+
+  <!-- Overkrop -->
+  <div class="relative w-22 h-22 lg:w-32 lg:h-32">
+    <img :src="uppers[upperIndex]" class="w-full h-full object-cover rounded-lg border-2 border-neutral-700 filter grayscale hover:grayscale-0">
+    <button @click="prev('upper')" class="cursor-pointer absolute left-0 top-1/2 -translate-y-1/2 px-2 py-1 bg-neutral-700 text-white rounded">←</button>
+    <button @click="next('upper')" class="cursor-pointer absolute right-0 top-1/2 -translate-y-1/2 px-2 py-1 bg-neutral-700 text-white rounded">→</button>
+  </div>
+
+  <!-- Underkrop -->
+  <div class="relative w-22 h-22 lg:w-32 lg:h-32">
+    <img :src="lowers[lowerIndex]" class="w-full h-full object-cover rounded-lg border-2 border-neutral-700 filter grayscale hover:grayscale-0">
+    <button @click="prev('lower')" class="cursor-pointer absolute left-0 top-1/2 -translate-y-1/2 px-2 py-1 bg-neutral-700 text-white rounded">←</button>
+    <button @click="next('lower')" class="cursor-pointer absolute right-0 top-1/2 -translate-y-1/2 px-2 py-1 bg-neutral-700 text-white rounded">→</button>
+  </div>
+
+</section>
+
+
 <script>
+document.addEventListener('alpine:init', () => {
+  Alpine.data('personBuilder', () => ({
+    heads: ['/images/head1.png','/images/head2.png','/images/head3.png','/images/head4.png'],
+    uppers: ['/images/upper1.png','/images/upper2.png','/images/upper3.png','/images/upper4.png'],
+    lowers: ['/images/lower1.png','/images/lower2.png','/images/lower3.png','/images/lower4.png'],
+
+    // Tilfældige startindeks
+    headIndex: 0,
+    upperIndex: 0,
+    lowerIndex: 0,
+
+    init() {
+      this.headIndex = Math.floor(Math.random() * this.heads.length);
+      this.upperIndex = Math.floor(Math.random() * this.uppers.length);
+      this.lowerIndex = Math.floor(Math.random() * this.lowers.length);
+    },
+
+    getArray(segment) {
+      return { head: this.heads, upper: this.uppers, lower: this.lowers }[segment];
+    },
+
+    next(segment) {
+      const array = this.getArray(segment);
+      this[segment+'Index'] = (this[segment+'Index'] + 1) % array.length;
+    },
+
+    prev(segment) {
+      const array = this.getArray(segment);
+      this[segment+'Index'] = (this[segment+'Index'] - 1 + array.length) % array.length;
+    }
+  }))
+})
+</script>
+
+
+<!-- <script>
 document.addEventListener('alpine:init', () => {
   Alpine.data('personBuilder', () => ({
     headIndex: 0,
@@ -58,4 +120,4 @@ document.addEventListener('alpine:init', () => {
     }
   }))
 })
-</script>
+</script> -->
